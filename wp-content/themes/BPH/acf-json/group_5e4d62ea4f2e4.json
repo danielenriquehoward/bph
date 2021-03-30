@@ -1,0 +1,617 @@
+{
+    "key": "group_5e4d62ea4f2e4",
+    "title": "Block CTA (Advanced)",
+    "fields": [
+        {
+            "key": "field_5e3979730dab9",
+            "label": "CTA Button",
+            "name": "cta_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e397ba6a035c",
+            "label": "Button Type",
+            "name": "button_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3979730dab9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "choices": {
+                "normal": "Normal",
+                "circle_image": "Circle Image"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "normal",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e3979730daba",
+            "label": "Alignment (horizontal)",
+            "name": "cta_button_alignment",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3979730dab9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "choices": {
+                "start": "Left",
+                "center": "Center",
+                "end": "Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "left",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e3979730dabb",
+            "label": "Alignment (vertical)",
+            "name": "cta_button_alignment_vertical",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3979730dab9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "choices": {
+                "row": "Left to Right",
+                "column": "Top to Bottom"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "inline",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e3979730dabc",
+            "label": "CTA Repeater",
+            "name": "cta_repeater",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3979730dab9",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5e397ba6a035c",
+                        "operator": "==",
+                        "value": "normal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add CTA Button",
+            "sub_fields": [
+                {
+                    "key": "field_5e3979730dabd",
+                    "label": "Link Text",
+                    "name": "link_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e3979730dabe",
+                    "label": "Link Type",
+                    "name": "link_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "internal": "Internal",
+                        "external": "External"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "",
+                    "return_format": ""
+                },
+                {
+                    "key": "field_5e3979730dabf",
+                    "label": "Link Internal",
+                    "name": "link_internal",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e3979730dabe",
+                                "operator": "==",
+                                "value": "internal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "post_type": [
+                        "page",
+                        "articles",
+                        "listings",
+                        "guides",
+                        "events"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_5e3979730dac0",
+                    "label": "Link External",
+                    "name": "link_external",
+                    "type": "text",
+                    "instructions": "use https:\/\/ or http:\/\/ or relative path for archive pages ie \/listings",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e3979730dabe",
+                                "operator": "==",
+                                "value": "external"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e3979730dac1",
+                    "label": "Button Style (fill)",
+                    "name": "button_style_fill",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "fill": "Fill (fill background)",
+                        "border": "Border (transparent background)"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "",
+                    "return_format": ""
+                },
+                {
+                    "key": "field_5e3979730dac2",
+                    "label": "Button Style (corners)",
+                    "name": "button_style_corners",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "round": "Rounded Corners",
+                        "square": "Squared Corners"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "",
+                    "return_format": ""
+                },
+                {
+                    "key": "field_5e3979730dac3",
+                    "label": "Button Style (color)",
+                    "name": "button_style_colors",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "concrete": "<span style=\"display:inline-block;background-color:#191D1F;color:white;padding:0.25em 0.5em\">Concrete<\/span>",
+                        "marble-steps": "<span style=\"display:inline-block;background-color:#C7BDB5;color:black;padding:0.25em 0.5em\">Marble Steps<\/span>",
+                        "street-lamp": "<span style=\"display:inline-block;background-color:#005A55;color:white;padding:0.25em 0.5em\">Street Lamp<\/span>",
+                        "dawn": "<span style=\"display:inline-block;background-color:#E1CCE3;color:black;padding:0.25em 0.5em\">Dawn<\/span>",
+                        "crab": "<span style=\"display:inline-block;background-color:#ED592A;color:white;padding:0.25em 0.5em\">Crab<\/span>",
+                        "flamingo": "<span style=\"display:inline-block;background-color:#F9B7B6;color:black;padding:0.25em 0.5em\">Flamingo<\/span>",
+                        "edgar": "<span style=\"display:inline-block;background-color:#11236A;color:white;padding:0.25em 0.5em\">Edgar<\/span>",
+                        "aqua": "<span style=\"display:inline-block;background-color:#00C7CD;color:black;padding:0.25em 0.5em\">Aqua<\/span>",
+                        "neon": "<span style=\"display:inline-block;background-color:#B5FF01;color:black;padding:0.25em 0.5em\">Neon<\/span>"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "",
+                    "return_format": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e397a480dac6",
+            "label": "CTA Repeater (circle image)",
+            "name": "cta_repeater_circular",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3979730dab9",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5e397ba6a035c",
+                        "operator": "==",
+                        "value": "circle_image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "collapsed": "",
+            "min": 0,
+            "max": 4,
+            "layout": "block",
+            "button_label": "Add CTA Button",
+            "sub_fields": [
+                {
+                    "key": "field_5e397a480dac7",
+                    "label": "Link Text",
+                    "name": "link_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e397a480dac8",
+                    "label": "Link Type",
+                    "name": "link_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "internal": "Internal",
+                        "external": "External"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5e397a480dac9",
+                    "label": "Link Internal",
+                    "name": "link_internal",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e397a480dac8",
+                                "operator": "==",
+                                "value": "internal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "post_type": [
+                        "articles",
+                        "events",
+                        "guides",
+                        "listings",
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_5e397a480daca",
+                    "label": "Link External",
+                    "name": "link_external",
+                    "type": "text",
+                    "instructions": "use https:\/\/ or http:\/\/ or relative path for archive pages ie \/listings",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e397a480dac8",
+                                "operator": "==",
+                                "value": "external"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e397a480dacb",
+                    "label": "Button Style (fill)",
+                    "name": "button_style_fill",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "fill": "Fill (fill background)",
+                        "border": "Border (transparent background)"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5e397a480dacc",
+                    "label": "Button Style (corners)",
+                    "name": "button_style_corners",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "round": "Rounded Corners",
+                        "square": "Squared Corners"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5e397a480dacd",
+                    "label": "Button Style (color)",
+                    "name": "button_style_colors",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "choices": {
+                        "concrete": "<span style=\"display:inline-block;background-color:#191D1F;color:white;padding:0.25em 0.5em\">Concrete<\/span>",
+                        "marble-steps": "<span style=\"display:inline-block;background-color:#C7BDB5;color:black;padding:0.25em 0.5em\">Marble Steps<\/span>",
+                        "street-lamp": "<span style=\"display:inline-block;background-color:#005A55;color:white;padding:0.25em 0.5em\">Street Lamp<\/span>",
+                        "dawn": "<span style=\"display:inline-block;background-color:#E1CCE3;color:black;padding:0.25em 0.5em\">Dawn<\/span>",
+                        "crab": "<span style=\"display:inline-block;background-color:#ED592A;color:white;padding:0.25em 0.5em\">Crab<\/span>",
+                        "flamingo": "<span style=\"display:inline-block;background-color:#F9B7B6;color:black;padding:0.25em 0.5em\">Flamingo<\/span>",
+                        "edgar": "<span style=\"display:inline-block;background-color:#11236A;color:white;padding:0.25em 0.5em\">Edgar<\/span>",
+                        "aqua": "<span style=\"display:inline-block;background-color:#00C7CD;color:black;padding:0.25em 0.5em\">Aqua<\/span>",
+                        "neon": "<span style=\"display:inline-block;background-color:#B5FF01;color:black;padding:0.25em 0.5em\">Neon<\/span>"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5e397abc0dace",
+                    "label": "Button Background Image",
+                    "name": "button_background_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "return_format": "array",
+                    "preview_size": "square",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1584021883
+}

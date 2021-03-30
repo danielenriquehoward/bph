@@ -1,0 +1,243 @@
+// pagination
+
+.ais-pagination {
+  display: flex;
+  .ais-pagination--item {
+    background: #FFF;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    a.ais-pagination--link{
+      height: 30px;
+      width: 30px;
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+    &.ais-pagination--item__page {
+      &.ais-pagination--item__active {
+        background: $street-lamp;
+        color: #fff;
+      }
+    }
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      background: $street-lamp;
+      color: #fff;
+    }
+  }
+}
+
+#ais-facets {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#ais-main {
+  padding: 0;
+}
+.ais-facets {
+  margin: 0;
+  .ais-root {
+    margin-bottom: 30px;
+  }
+}
+
+.algolia-autocomplete {
+  position: initial !important;
+  overflow-y: hidden;
+  max-height: 80vh;
+  width: 100% !important;
+  padding: 0px 0 35px;
+  overflow: scroll;
+  border-right: 0px solid $primary;
+  border-bottom: 0px solid $primary;
+  border-left: 0px solid $primary;
+  background: #EEECE7;
+  overflow-x: hidden;
+}
+
+.ais-refinement-list--checkbox {
+  margin-right: 2px;
+}
+
+.ais-menu--item__active,
+.ais-refinement-list--item__active {
+  font-family: $sans-bold;
+}
+
+.ais-hits--item {
+  border-bottom: 1px solid #000;
+  padding-bottom: 30px;
+}
+
+.ais-refinement-list--item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ais-stats--body {
+  color: #999;
+  font-family: $sans-italic;
+}
+.ais-menu--count,
+.ais-menu--list {
+  font-family: $sans;
+}
+.ais-menu--count,
+.ais-hierarchical-menu--count,
+.ais-refinement-list--label span.ais-refinement-list--count {
+  color: #888;
+  font-size: 14px;
+  &:before {
+    content: '(';
+  }
+  &:after {
+    content: ')';
+  }
+}
+
+#algolia-search-box {
+  margin-bottom: 50px;
+  svg {
+    max-width: 20px;
+  }
+  .search-icon {
+    fill: $primary;
+    left: 22px;
+    top: 16px;
+  }
+  input {
+    border-bottom: 0px solid $primary;
+    font-family: $sans;
+    font-size: 16px;
+    padding: 10px 15px 10px 53px;
+    letter-spacing: 1px;
+    // text-transform: uppercase;
+    background: #FFF;
+    border: 1px solid #000;
+  }
+}
+
+.ais-hierarchical-menu--item__active > div > a {
+  font-family: $sans-medium;
+}
+
+.algolia-autocomplete {
+  border: 0;
+}
+
+
+#algolia-search-box {
+  input {
+    color: $primary;
+    font-family: $sans;
+    border: 0;
+  }
+}
+
+
+
+/* //// search page //// */
+.ais-hits--item {
+  border-bottom: 1px solid $primary;
+  em {
+    background: $crab;
+  }
+  a {
+    em {
+      background: $crab;
+    }
+  }
+}
+
+
+/* //// instant search //// */
+.aa-dropdown-menu {
+  color: #000;
+  background: transparent;
+  font-size: 12px;
+  padding: 15px 0 150px;
+  border-radius: 0;
+  box-shadow: 0 0px 0px rgba(0,0,0,.25), 0 0 0px rgb(255, 160, 160);
+  a {
+    color: #d8d8d8;
+  }
+  .autocomplete-header {
+    margin: 0;
+    border-bottom: 0px solid #000;
+    color: $street-lamp;
+  }
+  .autocomplete-header-title {
+    font-family: $sans-bold-italic;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 15px 15px 14px 15px;
+    // border-bottom: 1px solid #fff;
+    width: 100%;
+    min-width: 100%;
+    line-height: 1.45;
+  }
+  .aa-suggestion.aa-cursor {
+     background: #fff;
+     transition: all .35s;
+  }
+  .aa-suggestions {
+    display: block;
+    padding: 0 15px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .aa-suggestion {
+    width: 100%;
+    padding: 16px;
+    .suggestion-post-title {
+      color: #000;
+      font-size: 14px;
+      margin: 6px 0 3px;
+      font-family: $sans-bold;
+      font-weight: normal;
+    }
+    .suggestion-post-content {
+      color: #000;
+      display: block;
+      white-space: normal;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      em {
+        box-shadow: inset 0 -2px 0 0 $crab;
+      }
+    }
+    em {
+      color: $crab;
+    }
+  }
+  a.suggestion-link {
+    // display: flex;
+    flex-direction: row;
+    padding: 0;
+    svg {
+      fill: #000;
+      padding-bottom: 5px;
+    }
+  }
+  .suggestion-post-thumbnail {
+    // float: left;
+    margin-right: 10px;
+    margin-bottom: 0;
+    border-radius: 0px;
+    width: 90px;
+    height: 90px;
+    display: block;
+  }
+}

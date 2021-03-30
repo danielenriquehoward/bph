@@ -1,0 +1,221 @@
+
+.sticky-header {
+  .header-mobile {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: fixed;
+    transition: background .35s;
+  }
+  &.past-hero {
+    .header-mobile {
+      background: $primary;
+    }
+  }
+}
+
+.navbar-burger {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  transition: transform .4s;
+  height: 62px;
+  width: 62px;
+  top: 0;
+  right: 0;
+  padding: 0 18px 0;
+  background: $street-lamp;
+  // &.white-style {
+  //   span {
+  //     background: #fff;
+  //   }
+  //   &:hover {
+  //     background: #EEECE7;
+  //   }
+  //   &.is-active {
+  //     background: #EEECE7;
+  //     span {
+  //       background-color: #fff;
+  //     }
+  //   }
+  // }
+  span {
+    background: #fff;
+    width: 30px;
+    display: block;
+    height: 4px;
+    left: calc(50% - 15px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: .2s;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: ease-in;
+    &:nth-child(1) {
+      top: calc(50% - 8px);
+    }
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+    &:nth-child(3) {
+      top: calc(50% + 6px)
+    }
+  }
+  &:hover, &:active, &:focus {
+    span {
+      background: #fff;
+    }
+  }
+  &.is-active {
+    background: $street-lamp;
+    span {
+      background: #fff;
+      &:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+
+
+div.search-modal {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  transition: all .4s;
+  transform: translateY(-138px);
+  transform-origin: top;
+  // opacity: 0;
+  z-index: 0;
+  height: 55px;
+  // visibility: hidden;
+  overflow-y: scroll;
+  background: $primary;
+  &.menu-active {
+    visibility: visible;
+    z-index: 4;
+    // opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[name=s] {
+  @include placeholder-color($street-lamp);
+  background: transparent;
+  &:active, &:focus {
+    outline: 0;
+    background: transparent;
+  }
+}
+
+
+.search-wrap {
+  position: absolute;
+  left: auto;
+  right: 3px;
+  top: 3px;
+  z-index: 9;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 0;
+  padding: 8px 0px 0px 22px;
+}
+
+// .search-button {
+//   height: 45px;
+//   width: 45px;
+//   position: relative;
+//   z-index: 9999999;
+// }
+
+
+
+.search-button {
+  &:hover {
+    cursor: default;
+  }
+  .search-block {
+    position: absolute;
+    width: $size;
+    height: $size*2;
+    transform: rotate(-45deg);
+    z-index: 0;
+    right: 19px;
+    top: 16px;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: $size/2;
+      left: calc(#{$size}/2 - #{$stroke/2});
+      height: $size/2;
+      width: $stroke;
+      background: $street-lamp;
+      transition: background 0.35s;
+    }
+    .search-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      border: $stroke solid $street-lamp;
+      border-radius: 50%;
+      transition: border 0.35s;
+      transform: rotate(90deg);
+      transform-origin: 50% 50%;
+      z-index: 1;
+      // transition: border .15s .15s, height .15s .15s ease-out, top .15s .15s ease-out, border-radius .15s .15s;
+    }
+  }
+  &.is-active {
+    .search-block {
+      &:before,
+      &:after {
+        background: $street-lamp;
+      }
+      .search-icon {
+        border: $stroke solid $street-lamp;
+      }
+    }
+    // .search-block {
+    //   &:before {
+    //     transform: rotate(90deg);
+    //   }
+    //   &:before,
+    //   &:after {
+    //     height: $size*1.5;
+    //     border: $stroke/2 solid $street-lamp;
+    //     // transition: transform .15s .15s ease-in, height 0s .15s;
+    //   }
+    //   .search-icon {
+    //     height: 0;
+    //     top: $size/2;
+    //     width: $size;
+    //     border: $stroke/2 solid $street-lamp;
+    //     border-radius: 0;
+    //     transform-origin: 50% 50%;
+    //     transition: all .15s;
+    //     &:before {
+    //       transform: rotate(90deg);
+    //     }
+    //     &:before,
+    //     &:after {
+    //       height: $size*1.5;
+    //       transition:  all .15s;
+    //     }
+    //   }
+    // }
+  }
+}
+
+

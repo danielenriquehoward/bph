@@ -1,0 +1,142 @@
+footer  {
+  a.cli_settings_button {
+    color: #fff !important;
+    border: 0 !important;
+    font-size: 0.65rem;
+  }
+}
+
+.main-footer {
+	height: auto;
+	position: relative;
+}
+
+.main-footer .d-flex .col-2,
+.main-footer .d-flex .col-8{
+	height: 325px;
+	color: white;
+}
+
+.footer-logo {
+	font-size: 85px;
+}
+
+.footer-cta h2 {
+	font-size: 18px;
+}
+
+.footer-cta-input {
+	width: 100%;
+	height: 45px;
+	background: #fff;
+  border-bottom: 1px solid white;
+  font-family: $serif;
+	font-size: 18px;
+  padding: 8px;
+  -webkit-appearance: none;
+}
+
+input.footer-cta-input:focus {
+	outline: none;
+}
+
+input.footer-cta-input::-webkit-input-placeholder {
+	color: $primary;
+	font-family: $serif;
+	font-size: 20px;
+}
+
+.icon-Facebook,
+.icon-Twitter,
+.icon-Email,
+.icon-Link{
+	cursor: pointer;
+	.path1:before, .path2:before {
+		transition: .5s;
+	}
+	&:hover, &:active, &:focus {
+		.path1:before {
+			color: transparent;
+		}
+		.path2:before {
+			color: white;
+		}
+	}
+}
+
+
+// Maybe make this a global thing, for all inputs
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+  border-bottom: 1px solid white;
+}
+
+.footer-cta .icon-Arrow-Button {
+ font-size: 45px;
+  position: relative;
+  // left: 15px;
+  // top: 15px;
+  transition: .5s;
+  border-radius: 100%;
+	cursor: pointer;
+  &:hover, &:active, &:focus {
+  	background: rgba(255, 255, 255, .5);
+  	color: #12246A;
+  }
+}
+
+a.social {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+// .footer-cta .text-xs {
+// 	font-size: .55rem;
+// }
+
+// .footer-social span {
+// 	font-size: 42px;
+// }
+
+.main-footer .icon-box {
+	margin-bottom: 0px;
+}
+
+.height-half {
+	height: 50%;
+}
+
+.footer-image {
+	height: 200px;
+	width: 85%;
+	margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-social-mobile {
+	line-height: 45px;
+}
+.footer-social-mobile span {
+	font-size: 40px;
+}
+
+.sub-footer .chevron {
+  width: 12px;
+  height: 8px;
+  margin: 0px 11px;
+}

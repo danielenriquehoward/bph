@@ -1,0 +1,271 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="container mb-24 mt-4">
+  <div class="row">
+    <div class="col-12 order-first">
+
+      <div id="algolia-search-box" class="d-flex mt-24 lg:mt-10">
+        <div id="algolia-stats"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-0 ml-3 mt-3 w-6 text-dark overflow-visible" viewBox="0 0 60 60">
+          <defs/>
+          <path stroke="black" stroke-width="8" d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 001.414.028 1 1 0 00.028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z"/>
+        </svg>
+      </div>
+
+    </div>
+    <div class="col-12 col-lg-8">
+
+      <div id="ais-wrapper">
+        <main id="ais-main">
+          <div id="algolia-hits" ></div>
+          <div id="algolia-pagination"></div>
+        </main>
+      </div>
+
+      <script type="text/html" id="tmpl-instantsearch-hit">
+        <article itemtype="http://schema.org/Article">
+          {% verbatim %}
+
+          <# if ( data.images.thumbnail ) { #>
+          <div class="ais-hits--thumbnail">
+            <a href="{{ data.permalink }}" title="{{ data.post_title }}">
+              <img src="{{ data.images.thumbnail.url }}" alt="{{ data.post_title }}" title="{{ data.post_title }}" itemprop="image" />
+            </a>
+          </div>
+          <# } #>
+
+          <div class="ais-hits--content">
+            <h5 class="mb-2 sans-medium" itemprop="name headline"><a href="{{ data.permalink }}" title="{{ data.post_title }}" itemprop="url">{{{ data._highlightResult.post_title.value }}}</a></h5>
+            <div class="excerpt">
+              <p>
+          <# if ( data._snippetResult['content'] ) { #>
+            <span class="suggestion-post-content">{{{ data._snippetResult['content'].value }}}</span>
+          <# } #>
+              </p>
+            </div>
+          </div>
+          <div class="ais-clearfix"></div>
+          {% endverbatim %}
+
+        </article>
+      </script>
+
+    </div>
+    <div class="col-12 col-lg-4 pl-lg-5 order-first lg:order-last">
+
+    <ul class="accordion mb-5 lg:mb-0">
+      <li class="search">
+          <a href="javascript:void(0);" class="toggle">
+            <div class="container narrow flex w-100 h-100 align-items-center overflow-visible">
+              <h4 class="text-xl flex mr-4 leading-none" slot="title">Filter Search</h4>
+              <span class="chevron-bottom ml-auto"></span>
+            </div>
+            <span class="sr-only">Search Dropdown Toggle</span>
+          </a>
+          <ul class="inner search bkg-sand">
+            <div class="container narrow pt-3 pb-5">
+              <aside id="ais-facets">
+                <section class="ais-facets" id="facet-post-types"></section>
+                <section class="ais-facets" id="facet-what-to-do"></section>
+                <section class="ais-facets" id="facet-categories"></section>
+                <section class="ais-facets" id="facet-tags"></section>
+              </aside>
+            </div>
+          </ul>
+      </li>
+    </ul>
+
+
+
+
+
+      <script type="text/javascript">
+        jQuery(function() {
+
+          if(jQuery('#algolia-search-box').length > 0) {
+
+            if (algolia.indices.searchable_posts === undefined && jQuery('.admin-bar').length > 0) {
+              alert('It looks like you haven\'t indexed the searchable posts index. Please head to the Indexing page of the Algolia Search plugin and index it.');
+            }
+
+            /* Instantiate instantsearch.js */
+            var search = instantsearch({
+              appId: algolia.application_id,
+              apiKey: algolia.search_api_key,
+              indexName: algolia.indices.searchable_posts.name,
+              urlSync: {
+                mapping: {'q': 's'},
+                trackedParameters: ['query']
+              },
+              searchParameters: {
+              facetingAfterDistinct: true,
+              highlightPreTag: '__ais-highlight__',
+              highlightPostTag: '__/ais-highlight__'
+              }
+            });
+
+            /* Search box widget */
+            search.addWidget(
+              instantsearch.widgets.searchBox({
+                container: '#algolia-search-box',
+                placeholder: 'Search for...',
+                wrapInput: false,
+                poweredBy: algolia.powered_by_enabled
+              })
+            );
+
+            /* Stats widget */
+            search.addWidget(
+              instantsearch.widgets.stats({
+                container: '#algolia-stats'
+              })
+            );
+
+            /* Hits widget */
+            search.addWidget(
+              instantsearch.widgets.hits({
+                container: '#algolia-hits',
+                hitsPerPage: 10,
+                templates: {
+                  empty: 'No results were found for "<strong>{{query}}</strong>".',
+                  item: wp.template('instantsearch-hit')
+                },
+                transformData: {
+                  item: function (hit) {
+
+                    function replace_highlights_recursive (item) {
+                      if( item instanceof Object && item.hasOwnProperty('value')) {
+                        item.value = _.escape(item.value);
+                        item.value = item.value.replace(/__ais-highlight__/g, '<em>').replace(/__\/ais-highlight__/g, '</em>');
+                      } else {
+                        for (var key in item) {
+                          item[key] = replace_highlights_recursive(item[key]);
+                        }
+                      }
+                      return item;
+                    }
+
+                    hit._highlightResult = replace_highlights_recursive(hit._highlightResult);
+                    hit._snippetResult = replace_highlights_recursive(hit._snippetResult);
+
+                    return hit;
+                  }
+                }
+              })
+            );
+
+            /* Pagination widget */
+            search.addWidget(
+              instantsearch.widgets.pagination({
+                container: '#algolia-pagination',
+              })
+            );
+
+            /* Post types refinement widget */
+            search.addWidget(
+              instantsearch.widgets.menu({
+                container: '#facet-post-types',
+                attributeName: 'post_type_label',
+                sortBy: ['isRefined:desc', 'count:desc', 'name:asc'],
+                limit: 10,
+                templates: {
+                  header: '<h6 class="widgettitle sans-medium mb-2 uppercase letter-spacing text-xs">Post Type</h6>'
+                },
+              })
+            );
+
+            /* Categories refinement widget */
+            search.addWidget(
+              instantsearch.widgets.hierarchicalMenu({
+                container: '#facet-categories',
+                separator: ' > ',
+                sortBy: ['count'],
+                attributes: ['taxonomies_hierarchical.category.lvl0', 'taxonomies_hierarchical.category.lvl1', 'taxonomies_hierarchical.category.lvl2'],
+                templates: {
+                  header: '<h6 class="widgettitle sans-medium mb-2 uppercase letter-spacing text-xs">Category</h6>'
+                }
+              })
+            );
+
+            /* Tags refinement widget */
+            search.addWidget(
+              instantsearch.widgets.refinementList({
+                container: '#facet-tags',
+                attributeName: 'taxonomies.post_tag',
+                operator: 'and',
+                limit: 10,
+                sortBy: ['isRefined:desc', 'count:desc', 'name:asc'],
+                templates: {
+                  header: '<h6 class="widgettitle sans-medium mb-2 uppercase letter-spacing text-xs">Tag</h6>'
+                }
+              })
+            );
+
+            // /* listings refinement widget */
+            search.addWidget(
+              instantsearch.widgets.refinementList({
+                container: '#facet-what-to-do',
+                attributeName: 'taxonomies.what_to_do',
+                operator: 'and',
+                limit: 10,
+                sortBy: ['isRefined:desc', 'count:desc', 'name:asc'],
+                templates: {
+                  header: '<h6 class="widgettitle sans-medium mb-2 uppercase letter-spacing text-xs">What To Do</h6>'
+                }
+              })
+            );
+
+            // /* topics refinement widget */
+            // search.addWidget(
+            //   instantsearch.widgets.refinementList({
+            //     container: '#facet-topics',
+            //     attributeName: 'taxonomies.program',
+            //     operator: 'and',
+            //     limit: 10,
+            //     sortBy: ['isRefined:desc', 'count:desc', 'name:asc'],
+            //     templates: {
+            //       header: '<h6 class="widgettitle sans-medium mb-2 uppercase letter-spacing text-xs">topics</h6>'
+            //     }
+            //   })
+            // );
+
+            // /* publication-types refinement widget */
+            // search.addWidget(
+            //   instantsearch.widgets.refinementList({
+            //     container: '#facet-publication-types',
+            //     attributeName: 'taxonomies.publication-type',
+            //     operator: 'and',
+            //     limit: 10,
+            //     sortBy: ['isRefined:desc', 'count:desc', 'name:asc'],
+            //     templates: {
+            //       header: '<h6 class="widgettitle sans-medium mb-2 uppercase letter-spacing text-xs">publication-types</h6>'
+            //     }
+            //   })
+            // );
+
+            // /* Users refinement widget */
+            // search.addWidget(
+            //   instantsearch.widgets.menu({
+            //     container: '#facet-users',
+            //     attributeName: 'post_author.display_name',
+            //     sortBy: ['isRefined:desc', 'count:desc', 'name:asc'],
+            //     limit: 10,
+            //     templates: {
+            //       header: '<h6 class="widgettitle sans-medium mb-2 uppercase letter-spacing text-xs">Authors</h6>'
+            //     }
+            //   })
+            // );
+
+            /* Start */
+            search.start();
+
+            jQuery('#algolia-search-box input').attr('type', 'search').select();
+          }
+
+        });
+      </script>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,103 @@
+#hero {
+  .back-to {
+    position: relative;
+    left: -100px;
+    top: -20px;
+    &:hover {
+      color: white;
+      span {
+        color: white;
+      }
+    }
+    &:active {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.filter-title {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+}
+
+.dropdown-overflow {
+  // position: relative;
+  height: 415px;
+  overflow-y: scroll;
+}
+
+.dropdown-container {
+  height: 110px;
+  overflow: visible;
+}
+
+#filter-trigger,
+.datepicker {
+  min-width: 300px;
+  max-width: 300px;
+}
+#filter-trigger.bigger-filter {
+  min-width: auto;
+  max-width: none;
+}
+ul.custom-dropdown{
+  &.events-dropdown {
+    a {
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    li{
+      &:hover {
+        background: $concrete;
+        color: white;
+      }
+    }
+  }
+  // width: 300px;
+  li {
+    position: relative;
+    z-index: 1;
+    &:hover{
+      background: #b9b2ad;
+    }
+  }
+}
+
+#filter-clear {
+  line-height: 46px;
+}
+
+.icon-add-click {
+  transform: rotate(135deg);
+}
+
+.filter-title{
+  div.flex {
+    max-width: 75%;
+  }
+  .icon-bg {
+    text-align: right;
+    background: linear-gradient(90deg, rgba(24, 28, 30, 0) -100%, #181c1e 100%);
+    .icon-add {
+      transition: transform 1s;
+      width: 25px;
+      margin-left: auto;
+    }
+  }
+  &:hover{
+    &.sand-hover {
+      background: #b9b2ad;
+    }
+    &.concrete-hover{
+      background: $concrete;
+    }
+  }
+  .special-icon {
+    height: 20px;
+  }
+}

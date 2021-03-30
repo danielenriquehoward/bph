@@ -1,0 +1,191 @@
+{
+    "key": "group_5eac418db9b93",
+    "title": "Alert Banner",
+    "fields": [
+        {
+            "key": "field_5eac4a859c233",
+            "label": "Turn Banner On",
+            "name": "turn_banner_on",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eac418e15f61",
+            "label": "Banner Copy",
+            "name": "banner_copy",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eac4a859c233",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 60
+        },
+        {
+            "key": "field_5eb1b69b23af4",
+            "label": "Banner Copy Mobile",
+            "name": "banner_copy_mobile",
+            "type": "text",
+            "instructions": "limit to 4-5 words please",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eac4a859c233",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 30
+        },
+        {
+            "key": "field_5eb2a7b300526",
+            "label": "Delay",
+            "name": "banner_delay",
+            "type": "text",
+            "instructions": "default 6 seconds : 6000",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eac4a859c233",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": 6000,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 30
+        },
+        {
+            "key": "field_5eac41b1ebdb6",
+            "label": "clonelink",
+            "name": "clonelink",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eac4a859c233",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "clone": [
+                "field_5e6a41645b4e5",
+                "field_5e6a41645b4e4",
+                "field_5e6a41645b4e6",
+                "field_5e6a41645b4e7"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5eac45373b2a6",
+            "label": "clonecolor",
+            "name": "clonecolor",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eac4a859c233",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "clone": [
+                "field_5e6a5b03bbb6c"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 1,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-alert-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1588766676
+}

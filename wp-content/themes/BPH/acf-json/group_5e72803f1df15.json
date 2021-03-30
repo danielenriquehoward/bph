@@ -1,0 +1,124 @@
+{
+    "key": "group_5e72803f1df15",
+    "title": "Subnav Controls",
+    "fields": [
+        {
+            "key": "field_5e728050f3242",
+            "label": "Hide Subnav?",
+            "name": "is_hide_subnav",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e7b7fd34f170",
+            "label": "Title Override",
+            "name": "title_override",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": "Hop Around",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e7b800b4f171",
+            "label": "Highlight Color",
+            "name": "highlight_color",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "choices": {
+                "concrete": "<span style=\"display:inline-block;background-color:#191D1F;color:white;padding:0.25em 0.5em\">Concrete<\/span>",
+                "marble-steps": "<span style=\"display:inline-block;background-color:#C7BDB5;color:black;padding:0.25em 0.5em\">Marble Steps<\/span>",
+                "street-lamp": "<span style=\"display:inline-block;background-color:#005A55;color:white;padding:0.25em 0.5em\">Street Lamp<\/span>",
+                "dawn": "<span style=\"display:inline-block;background-color:#E1CCE3;color:black;padding:0.25em 0.5em\">Dawn<\/span>",
+                "crab": "<span style=\"display:inline-block;background-color:#ED592A;color:white;padding:0.25em 0.5em\">Crab<\/span>",
+                "flamingo": "<span style=\"display:inline-block;background-color:#F9B7B6;color:black;padding:0.25em 0.5em\">Flamingo<\/span>",
+                "edgar": "<span style=\"display:inline-block;background-color:#11236A;color:white;padding:0.25em 0.5em\">Edgar<\/span>",
+                "aqua": "<span style=\"display:inline-block;background-color:#00C7CD;color:black;padding:0.25em 0.5em\">Aqua<\/span>",
+                "neon": "<span style=\"display:inline-block;background-color:#B5FF01;color:black;padding:0.25em 0.5em\">Neon<\/span>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "crab",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "articles"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "listings"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "guides"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "events"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1585152084
+}

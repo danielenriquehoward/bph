@@ -1,0 +1,19 @@
+@import '/variables';
+
+// ******************************************************
+// Here you can define your own admin page style sheet.
+// ******************************************************
+
+body.wp-admin {
+
+  #plugins-by-dreihochzwo {
+    display: none;
+  }
+
+  .collapse {
+    position: absolute;
+    top: 0 !important;
+  }
+
+}
+

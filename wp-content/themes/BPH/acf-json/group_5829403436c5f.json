@@ -1,0 +1,192 @@
+{
+    "key": "group_5829403436c5f",
+    "title": "Event Options",
+    "fields": [
+        {
+            "key": "field_5d7a8a27b1102",
+            "label": "Col1",
+            "name": "col1",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column-type": "3_5"
+        },
+        {
+            "key": "field_5e593b847e2c3",
+            "label": "Col1 (copy)",
+            "name": "",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "column-type": "1_2"
+        },
+        {
+            "key": "field_5829403de6df3",
+            "label": "Date & Time (start)",
+            "name": "date",
+            "type": "date_time_picker",
+            "instructions": "Note: time will be hidden by default. Select the \"Show time\" checkbox below to make it visible.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "45",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e593b897e2c5",
+            "label": "Col1 (copy) (copy)",
+            "name": "",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "column-type": "1_2"
+        },
+        {
+            "key": "field_5d3740d8fb00e",
+            "label": "Date & Time (end)",
+            "name": "date_end",
+            "type": "date_time_picker",
+            "instructions": "Note: time will be hidden by default. Select the \"Show time\" checkbox below to make it visible.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e593ba37e2c7",
+            "label": "Col1 (copy) (copy) (copy)",
+            "name": "",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "column-type": "1_1"
+        },
+        {
+            "key": "field_5d3076c01120e",
+            "label": "Specifics & Location",
+            "name": "event_location",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5d7a8a5ab1103",
+            "label": "Col2",
+            "name": "_copy",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column-type": "2_5"
+        },
+        {
+            "key": "field_5d7a8a69b1104",
+            "label": "Registration Link",
+            "name": "registration_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d7a8a7cb1105",
+            "label": "Registration Link Button Title",
+            "name": "registration_link_button_title",
+            "type": "text",
+            "instructions": "Overrides Register CTA Button name",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Register Now",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "events"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1587130822
+}

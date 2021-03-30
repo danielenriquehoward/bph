@@ -1,0 +1,38 @@
+// Empirical widths
+// should be the same as (../build/tailwind.config.js `containerMaxWidths`)
+$sm:   640px;
+$md:   768px;
+$lg:   992px;
+$xl:   1140px;
+$xxl:  1460px;
+
+
+// _config.scss
+$breakpoints: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+);
+
+// bootstrap overrides
+$grid-breakpoints: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+) !default;
+
+
+// this needs to be minus 60px of empirical widths
+$container-max-widths: (
+  sm:  580px,
+  md:  708px,
+  lg:  932px,
+  xl:  1080px,
+  xxl: 1400px,
+) !default;

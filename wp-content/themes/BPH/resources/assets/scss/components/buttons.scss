@@ -1,0 +1,776 @@
+// $concrete: #191D1F;
+// $marble-steps: #C7BDB5;
+// $street-lamp: #005A55;
+// $dawn: #E1CCE3;
+// $crab: #ED592A;
+// $flamingo: #F9B7B6;
+// $edgar: #11236A;
+// $aqua: #00C7CD;
+// $neon: #B5FF01;
+
+a.button {
+  line-height: 1;
+  transition: all .25s;
+  // font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    opacity: 1;
+  }
+  &.thick {
+    border-width: thick !important;
+  }
+}
+
+button.button {
+  line-height: 1;
+  transition: all .25s;
+  // font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 10px 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $sans-alt-slanted;
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    opacity: 1;
+  }
+  &.thick {
+    border-width: thick !important;
+  }
+}
+
+// $colors-name: concrete,
+//               marble-steps,
+//               street-lamp,
+//               dawn,
+//               crab,
+//               flamingo,
+//               edgar,
+//               aqua,
+//               neon;
+
+// $colors:  $concrete,
+//           $marble-steps,
+//           $street-lamp,
+//           $dawn,
+//           $crab,
+//           $flamingo,
+//           $edgar,
+//           $aqua,
+//           $neon;
+
+// @each $color in $colors {
+//   .overlay-#{$colors} {
+//     background-color: rgba($color, 0.6);
+//     &:hover {
+//       background-color: rgba($color, 1);
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+a.see-more {
+  width: 175px;
+  border-radius: 50px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  transition: all .3s;
+  &:hover {
+    text-decoration: none;
+    background: black;
+    color: white;
+  }
+}
+
+a span.blur {
+  &.active {
+    transition: 1s ease;
+    filter: blur(12px);
+  }
+}
+
+.blurbeneath {
+  transform: scale(1);
+  transition: 1s ease-in-out;
+  &:hover {
+    transform: scale(1.12);
+  }
+}
+
+$colors:  "concrete" $concrete,
+          "marble-steps" $marble-steps,
+          "street-lamp" $street-lamp,
+          "dawn" $dawn,
+          "crab" $crab,
+          "flamingo" $flamingo,
+          "edgar" $edgar,
+          "aqua" $aqua,
+          "neon" $neon;
+
+@each $name, $color in $colors {
+  .overlay-#{$name} {
+    background-color: rgba($color, .3);
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 1s ease;
+    &.solid {
+      background-color: rgba($color, 1);
+    }
+    &.active {
+      background-color: rgba($color, .65);
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+// @each $name, $color in $colors {
+//   a.button.#{$name}-button {
+//     @include button-style($color, white, transparent, $color, $color);
+//   }
+// }
+// @each $name, $color in $colors {
+//   a.button.#{$name}-button-button.fill {
+//     @include button-style(white, $color, $color, transparent, $color);
+//   }
+// }
+
+
+
+
+// mixin variables // $color, $colorhover, $fill, $fillhover, $border
+.concrete-button {
+  @include button-style($concrete, white, transparent, $concrete, $concrete);
+}
+.concrete-button.fill {
+  @include button-style(white, $concrete, $concrete, transparent, $concrete);
+}
+
+.marble-steps-button {
+  @include button-style($marble-steps, white, transparent, $marble-steps, $marble-steps);
+}
+.marble-steps-button.fill {
+  @include button-style(white, $marble-steps, $marble-steps, transparent, $marble-steps);
+}
+
+.street-lamp-button {
+  @include button-style($street-lamp, white, transparent, $street-lamp, $street-lamp);
+}
+.street-lamp-button.fill {
+  @include button-style(white, $street-lamp, $street-lamp, transparent, $street-lamp);
+}
+
+.dawn-button {
+  @include button-style($dawn, white, transparent, $dawn, $dawn);
+}
+.dawn-button.fill {
+  @include button-style(black, $dawn, $dawn, transparent, $dawn);
+}
+
+.crab-button {
+  @include button-style($crab, white, transparent, $crab, $crab);
+}
+.crab-button.fill {
+  @include button-style(white, $crab, $crab, transparent, $crab);
+}
+
+.flamingo-button {
+  @include button-style($flamingo, white, transparent, $flamingo, $flamingo);
+}
+.flamingo-button.fill {
+  @include button-style(black, $flamingo, $flamingo, transparent, $flamingo);
+}
+
+.edgar-button {
+  @include button-style($edgar, white, transparent, $edgar, $edgar);
+}
+.edgar-button.fill {
+  @include button-style(white, $edgar, $edgar, transparent, $edgar);
+}
+
+.aqua-button {
+  @include button-style($aqua, white, transparent, $aqua, $aqua);
+}
+.aqua-button.fill {
+  @include button-style(white, $aqua, $aqua, transparent, $aqua);
+}
+
+.neon-button {
+  @include button-style($neon, white, transparent, $neon, $neon);
+}
+.neon-button.fill {
+  @include button-style(white, $neon, $neon, transparent, $neon);
+}
+
+
+// a.street-lamp-button {
+//   background: $street-lamp;
+//   color: #fff;
+//   border: 1px solid $street-lamp;
+//   &:hover, &:active, &:focus {
+//     background: transparent;
+//     color: #fff;
+//     border: 1px solid $street-lamp;
+//   }
+// }
+// a.dawn-button {
+//   background: $dawn;
+//   color: #fff;
+//   border: 1px solid $dawn;
+//   &:hover, &:active, &:focus {
+//     background: transparent;
+//     color: #fff;
+//     border: 1px solid $dawn;
+//   }
+// }
+// a.crab-button {
+//   background: $crab;
+//   color: #fff;
+//   border: 1px solid $crab;
+//   &:hover, &:active, &:focus {
+//     background: transparent;
+//     color: #fff;
+//     border: 1px solid $crab;
+//   }
+// }
+// a.flamingo-button {
+//   background: $flamingo;
+//   color: #fff;
+//   border: 1px solid $flamingo;
+//   &:hover, &:active, &:focus {
+//     background: transparent;
+//     color: #fff;
+//     border: 1px solid $flamingo;
+//   }
+// }
+// a.edgar-button {
+//   background: $edgar;
+//   color: #fff;
+//   border: 1px solid $edgar;
+//   &:hover, &:active, &:focus {
+//     background: transparent;
+//     color: #fff;
+//     border: 1px solid $edgar;
+//   }
+// }
+// a.aqua-button {
+//   background: $aqua;
+//   color: #fff;
+//   border: 1px solid $aqua;
+//   &:hover, &:active, &:focus {
+//     background: transparent;
+//     color: #fff;
+//     border: 1px solid $aqua;
+//   }
+// }
+// a.neon-button {
+//   background: $neon;
+//   color: #fff;
+//   border: 1px solid $neon;
+//   &:hover, &:active, &:focus {
+//     background: transparent;
+//     color: #fff;
+//     border: 1px solid $neon;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+.download-btn {
+  border: 4px solid #00B2CD;
+  max-width: 180px;
+  padding: 4px 14px;
+  border-radius: 23px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: $sans-bold-italic;
+  transition: .5s;
+  cursor: pointer;
+  text-align: center;
+  &:hover, &:active, &:focus {
+    background: white;
+    border-color: white;
+    a{
+      color: #00B2CD;
+      text-decoration: none;
+    }
+  }
+  a {
+    color: white;
+  }
+}
+
+
+
+
+
+.search-bar {
+  input.search {
+    @include placeholder-color (#fff)
+    @apply tracking-wider;
+    border-radius: 0;
+    font-family: $sans;
+    font-size: 14px;
+    // min-height: 45px;
+    width: 225px;
+    padding: 0 15px;
+    color: #FFF;
+    box-shadow: 0 0 0 #000;
+    border: 1px solid #fff;
+    &:focus, &:active {
+      border-color: #fff;
+      box-shadow: 0 0 5px 0 rgba($primary, 0.5);
+    }
+  }
+}
+
+.white-style .search-bar {
+  .icon-search:before {
+    color: #fff;
+  }
+  input.search {
+    @include placeholder-color (#fff)
+    @apply tracking-wider;
+    border-radius: 0;
+    font-family: $sans;
+    font-size: 14px;
+    // min-height: 45px;
+    width: 225px;
+    padding: 0 15px;
+    color: #fff;
+    box-shadow: 0 0 0 #000;
+    border: 1px solid #fff;
+    &:focus, &:active {
+      border-color: #fff;
+      box-shadow: 0 0 5px 0 rgba(#fff, 0.5);
+    }
+
+  }
+}
+
+// .mobile-search {
+//   input.search {
+//     @include placeholder-color ($primary-dark)
+//     @apply tracking-wider;
+//     border-radius: 0;
+//     font-family: $sans;
+//     font-size: 14px;
+//     // min-height: 45px;
+//     width: 100%;
+//     padding: 25px 15px;
+//     color: $primary-dark;
+//     box-shadow: 0 0 0 #000;
+//     border: 1px solid $primary-dark;
+//     &:focus, &:active {
+//       border-color: $primary-dark;
+//       box-shadow: 0 0 5px 0 rgba($primary, 0.5);
+//     }
+//   }
+//   .control.has-icons-right .icon {
+//     color: $primary-dark;
+//   }
+// }
+
+a.black-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // min-height: 45px;
+  background: transparent;
+  color: #000;
+  // font-family: $sans-medium;
+  border: 1px solid #000;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: $primary;
+    color: #fff;
+    border: 1px solid #000;
+  }
+}
+a.white-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // min-height: 45px;
+  background: transparent;
+  color: #fff;
+  // font-family: $sans-medium;
+  border: 1px solid #fff;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: $primary;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+a.primary-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // min-height: 45px;
+  background: transparent;
+  color: $primary;
+  // font-family: $sans-medium;
+  border: 1px solid $primary;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: $primary;
+    color: #fff;
+    border: 1px solid $primary;
+    opacity: 1;
+  }
+}
+a.primary-button-small {
+  font-size: 13px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 10px 15px;
+  // min-height: 45px;
+  background: transparent;
+  color: $primary;
+  // font-family: $sans-medium;
+  border: 1px solid $primary;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: $primary;
+    color: #fff;
+    border: 1px solid $primary;
+    opacity: 1;
+  }
+}
+a.secondary-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // min-height: 45px;
+  background: transparent;
+  color: $secondary;
+  // font-family: $sans-medium;
+  border: 1px solid $secondary;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: $secondary;
+    color: $primary-dark;
+    border: 1px solid $secondary;
+    opacity: 1;
+  }
+}
+
+.white-style a.white-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // min-height: 45px;
+  background: transparent;
+  color: #fff;
+  // font-family: $sans-medium;
+  border: 1px solid #fff;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: #fff;
+    color: $primary;
+    border: 1px solid #fff;
+    opacity: 1;
+  }
+}
+
+a.black-fill-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // min-height: 45px;
+  background: #000;
+  color: #fff;
+  // font-family: $sans-medium;
+  border: 1px solid #000;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+}
+
+a.primary-fill-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // min-height: 45px;
+  background: $primary;
+  color: #fff;
+  // font-family: $sans-medium;
+  border: 1px solid $primary;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: #fff;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+a.pagination-fill-button {
+  padding: 15px 30px;
+  background: $primary;
+  color: #fff;
+  transition: all .3s;
+  border: 1px solid transparent;
+  &:hover {
+    opacity: 1;
+    background: #fff;
+    color: $primary;
+    border: 1px solid $primary !important;
+  }
+}
+
+
+.alm-btn-wrap {
+  text-align: center;
+}
+
+#ajax-load-more {
+  width: 100%;
+}
+
+button.alm-load-more-btn {
+  display: flex;
+  margin: 100px auto;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
+  // border-radius: 50px;
+  // min-height: 45px;
+  background: $primary;
+  color: #fff;
+  // font-family: $sans-medium;
+  border: 1px solid $primary;
+  transition: all .35s;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: #fff;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.is-rounded {
+  border-radius: 290486px;
+}
+
+.button.squared {
+  height: 55px;
+  width: 55px;
+}
+
+a.cta-arrow-right {
+  display: flex;
+  width: 110px;
+  &:before {
+    border-style: solid;
+    border-color: $primary;
+    border-width: 2px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    transition: right .2s;
+    right: 15px;
+    top: 16px;
+    content: '';
+  }
+  &:after {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    color: $primary;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    right: 27px;
+    top: 26px;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: right .2s;
+    vertical-align: top;
+  }
+  &:hover {
+    opacity: 1;
+    &:before {
+      right: 10px;
+    }
+    &:after {
+      right: 22px;
+    }
+  }
+}
+
+
+.border-button-primary {
+  border: 1px solid $primary;
+  border-color: $primary;
+  padding: 0 20px;
+}
+
+.dropdown-menu {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  padding: 0;
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: #FFF;
+    li {
+      // font-family: $sans-medium;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+  &.is-active {
+    display: block;
+  }
+}
+button.button.black-button.button-dropdown {
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 8px 35px 8px 12px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  letter-spacing: 1.5px;
+  height: 45px;
+  background: transparent;
+  color: #000;
+  // font-family: $sans-medium;
+  border: 1px solid #000;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+  &:after {
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    border-color: #000;
+    content: '';
+    color: #000;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    right: 20px;
+    top: 15px;
+    position: absolute;
+    transform: rotate(135deg);
+    transition: right .2s;
+    vertical-align: top;
+  }
+}
+button.button.white-button.button-dropdown {
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 15px;
+  padding: 8px 35px 8px 12px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  height: 45px;
+  background: transparent;
+  color: #fff;
+  // font-family: $sans-medium;
+  border: 1px solid #fff;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  &:after {
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    border-color: #fff;
+    content: '';
+    color: #fff;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    right: 20px;
+    top: 15px;
+    position: absolute;
+    transform: rotate(135deg);
+    transition: right .2s;
+    vertical-align: top;
+  }
+}
+
+input.white-button {
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 10px 30px 8px;
+  height: 42px;
+  background: transparent;
+  color: #fff;
+  // font-family: $sans-medium;
+  border: 1px solid #fff;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+
+.control.has-icons-left .icon a.button-close-search,
+.control.has-icons-right .icon a.button-close-search {
+  pointer-events: initial;
+  cursor: pointer;
+}

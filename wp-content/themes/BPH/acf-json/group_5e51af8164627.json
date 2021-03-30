@@ -1,0 +1,311 @@
+{
+    "key": "group_5e51af8164627",
+    "title": "Block Offset",
+    "fields": [
+        {
+            "key": "field_5d2e3a17a0df2",
+            "label": "Offset Content?",
+            "name": "is_offset_content",
+            "type": "true_false",
+            "instructions": "Do you want to place images or block quotes to the left of main column?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e527488fb238",
+            "label": "Make Sticky?",
+            "name": "is_sticky",
+            "type": "true_false",
+            "instructions": "Do you want to offset content to be be sticky as you scroll down page?",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d2e3a17a0df2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d2e3a68a0df3",
+            "label": "Offset Content Type",
+            "name": "offset_content_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d2e3a17a0df2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "choices": {
+                "image": "Image",
+                "pull-quote": "Pull Quote",
+                "cta-buttons": "CTA Buttons"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e51af002caca",
+            "label": "Offset Alignment",
+            "name": "offset_alignment",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d2e3a17a0df2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "choices": {
+                "left": "<span class=\"dashicons   dashicons-align-left\"><\/span> Align Left",
+                "right": "<span class=\"dashicons   dashicons-align-right\"><\/span> Align Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "right",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e51e14e7f858",
+            "label": "",
+            "name": "quote_clone",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d2e3a17a0df2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2e3a68a0df3",
+                        "operator": "==",
+                        "value": "pull-quote"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "clone": [
+                "group_5e515f9a59cd0"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5d2e3e2305237",
+            "label": "Offset Image",
+            "name": "offset_image_repeater",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d2e3a17a0df2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2e3a68a0df3",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Image",
+            "sub_fields": [
+                {
+                    "key": "field_5e527a1d2b910",
+                    "label": "Offset Image",
+                    "name": "offset_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d2e3e4e05238",
+            "label": "Offset CTA",
+            "name": "offset_cta",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d2e3a17a0df2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2e3a68a0df3",
+                        "operator": "==",
+                        "value": "cta-buttons"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add CTA",
+            "sub_fields": [
+                {
+                    "key": "field_5e5275d9892f6",
+                    "label": "Offset CTA (advanced)",
+                    "name": "offset_cta_advanced",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d2e3a17a0df2",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_5d2e3a68a0df3",
+                                "operator": "==",
+                                "value": "cta-buttons"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "HunchSchemaProperty": "",
+                    "clone": [
+                        "field_5e3979730dabc",
+                        "field_5e3979730dabd",
+                        "field_5e3979730dabe",
+                        "field_5e3979730dabf",
+                        "field_5e3979730dac0",
+                        "field_5e3979730dac1",
+                        "field_5e3979730dac2",
+                        "field_5e3979730dac3"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1582463943
+}

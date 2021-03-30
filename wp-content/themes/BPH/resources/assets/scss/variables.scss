@@ -1,0 +1,54 @@
+// COLORS
+$primary:        #004270;
+$secondary:      #FFD53F;
+$primary-dark:   #0A202E;
+$primary-light:  #d7dde3;
+
+// HELPER URL
+$images: '../images';
+
+
+
+.text-primary {
+  color: $primary !important;
+}
+
+a.text-secondary {
+  color: $secondary !important;
+  &:hover, &:focus, &:active {
+    color: $secondary !important;
+  }
+}
+
+.text-secondary {
+  color: $secondary !important;
+  &:hover, &:focus, &:active {
+    color: $secondary !important;
+  }
+}
+
+.bg-secondary {
+  background: $secondary;
+}
+
+.bg-primary {
+  background: $primary;
+}
+
+.bg-primary-dark {
+  background: $primary-dark;
+}
+
+.text-primary-dark {
+  color: $primary-dark;
+}
+
+.border-primary {
+  border-color: $primary !important;
+}
+
+.border-secondary {
+  border-color: $secondary !important;
+}
+
+

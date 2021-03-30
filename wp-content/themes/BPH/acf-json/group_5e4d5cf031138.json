@@ -1,0 +1,100 @@
+{
+    "key": "group_5e4d5cf031138",
+    "title": "Block Design",
+    "fields": [
+        {
+            "key": "field_5e4d5d22b60a5",
+            "label": "Background",
+            "name": "background",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "choices": {
+                "concrete": "<span style=\"display:inline-block;background-color:#191D1F;color:white;padding:0.25em 0.5em;margin:10px 0px;\">Concrete<\/span>",
+                "marble-steps": "<span style=\"display:inline-block;background-color:#C7BDB5;color:black;padding:0.25em 0.5em;margin:10px 0px;\">Marble Steps<\/span>",
+                "street-lamp": "<span style=\"display:inline-block;background-color:#005A55;color:white;padding:0.25em 0.5em;margin:10px 0px;\">Street Lamp<\/span>",
+                "dawn": "<span style=\"display:inline-block;background-color:#E1CCE3;color:black;padding:0.25em 0.5em;margin:10px 0px;\">Dawn<\/span>",
+                "crab": "<span style=\"display:inline-block;background-color:#ED592A;color:white;padding:0.25em 0.5em;margin:10px 0px;\">Crab<\/span>",
+                "flamingo": "<span style=\"display:inline-block;background-color:#F9B7B6;color:black;padding:0.25em 0.5em;margin:10px 0px;\">Flamingo<\/span>",
+                "edgar": "<span style=\"display:inline-block;background-color:#11236A;color:white;padding:0.25em 0.5em;margin:10px 0px;\">Edgar<\/span>",
+                "aqua": "<span style=\"display:inline-block;background-color:#00C7CD;color:black;padding:0.25em 0.5em;margin:10px 0px;\">Aqua<\/span>",
+                "neon": "<span style=\"display:inline-block;background-color:#B5FF01;color:black;padding:0.25em 0.5em;margin:10px 0px;\">Neon<\/span>",
+                "sand": "<span style=\"display:inline-block;background-color:#E3DEDA;color:black;padding:0.25em 0.5em;margin:10px 0px;\">Sand<\/span>",
+                "none": "<span style=\"display:inline-block;color:black;padding:0.25em 0.5em;border:1px solid black;margin:10px 0px;\">None<\/span>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "none",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e877c2c155c7",
+            "label": "Padding Top",
+            "name": "padding_top_reset",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": 8,
+            "min": 0,
+            "max": 24,
+            "step": 4,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5e4efe1e7d47c",
+            "label": "Padding Bottom",
+            "name": "padding_bottom_reset",
+            "type": "range",
+            "instructions": "Padding in px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": 8,
+            "min": 0,
+            "max": 24,
+            "step": 4,
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1587755879
+}

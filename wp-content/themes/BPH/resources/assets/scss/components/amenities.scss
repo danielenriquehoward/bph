@@ -1,0 +1,52 @@
+.amenities-tab {
+  padding: 15px 20px 10px 25px;
+  max-height: calc(80vh);
+  overflow-y: scroll;
+  h2 {
+    // border-bottom: 1px solid rgba(0, 0, 0, .2);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-family: $sans-black;
+    font-weight: 700;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    align-content: flex-start;
+    li {
+      font-family: $sans;
+      font-weight: 400;
+      font-style: normal;
+      text-rendering: optimizeLegibility;
+      padding-right: 15px;
+    }
+  }
+}
+
+.amenities-button {
+  cursor: pointer;
+  transition: all .3s;
+  &:hover,
+  &:active,
+  &:focus {
+    background: #e9e5e1;
+    color: $concrete;
+  }
+  &.open {
+    background: #e9e5e1;
+    color: $concrete;
+    .icon-add{
+      transform: rotate(225deg);
+    }
+  }
+  .icon-add{
+    transition: transform 1s;
+    position: absolute;
+    right: 25px;
+    top: 4.5px;
+  }
+}

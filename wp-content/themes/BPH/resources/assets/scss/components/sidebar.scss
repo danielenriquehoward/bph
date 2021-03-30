@@ -1,0 +1,39 @@
+.main-block {
+  position: relative;
+}
+
+html {
+  &.fixnav {
+    .sidebar-menu{
+      &.fixed {
+        top: 140px;
+      }
+    }
+  }
+  &.unfixnav {
+    .sidebar-menu{
+      &.fixed {
+        top: 140px;
+      }
+    }
+  }
+}
+.sidebar-menu{
+  &.fixed {
+    position: sticky;
+  }
+  &.bottom {
+    bottom: 0;
+    position: sticky;
+    max-width: 100%;
+    top: 0;
+  }
+}
+
+.sidebar-wrapper {
+  position: relative;
+  top: 0px;
+  bottom: auto;
+  float: none;
+  height: calc(100% - 15px);
+}

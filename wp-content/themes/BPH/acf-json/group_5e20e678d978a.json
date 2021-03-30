@@ -1,0 +1,341 @@
+{
+    "key": "group_5e20e678d978a",
+    "title": "Hero Core",
+    "fields": [
+        {
+            "key": "field_5e27348db6ecc",
+            "label": "Top",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e2737594361e",
+            "label": "Video Background?",
+            "name": "video_background_top",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e26fd49e7b51",
+            "label": "Hero Background Image",
+            "name": "post_hero_background",
+            "type": "image",
+            "instructions": "Ideally a 16x 9 ratio",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2737594361e",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "return_format": "array",
+            "preview_size": "medium_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 2,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e273678013df",
+            "label": "Hero Background Image Mobile",
+            "name": "post_hero_background_mobile",
+            "type": "image",
+            "instructions": "Ideally a square ratio",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2737594361e",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 2,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e27371d0d95c",
+            "label": "Hero Background Video ID",
+            "name": "post_hero_background_video_top",
+            "type": "text",
+            "instructions": "16x 9 ratio\r\n\r\nexample: 5777280\r\n\r\nhttps:\/\/vimeo.com\/<strong>5777280<\/strong>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2737594361e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e27361e63354",
+            "label": "Typography",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e20e73992a46",
+            "label": "Hero Title SVG Desktop",
+            "name": "hero_title_svg_desktop",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e20e76992a47",
+            "label": "Hero Title SVG Mobile",
+            "name": "hero_title_svg_mobile",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e272eaaf5ab3",
+            "label": "Max Width",
+            "name": "max_width",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": 12,
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5e2734aeb6ecd",
+            "label": "Bottom",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e27382f4559f",
+            "label": "Video Background?",
+            "name": "video_background_bottom",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e20e6af92a44",
+            "label": "Hero Background Bottom  Image",
+            "name": "post_hero_background_bottom",
+            "type": "image",
+            "instructions": "Will crop image automatically to the 16 x 9 ratio.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e27382f4559f",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "return_format": "array",
+            "preview_size": "medium_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 2,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e2737200d95d",
+            "label": "Hero Background Video ID",
+            "name": "post_hero_background_video_bottom",
+            "type": "text",
+            "instructions": "16x 9 ratio\r\n\r\nexample: 5777280\r\n\r\nhttps:\/\/vimeo.com\/<strong>5777280<\/strong>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e27382f4559f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1584020770
+}

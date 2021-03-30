@@ -1,0 +1,47 @@
+{
+    "key": "group_5e20dd0dda190",
+    "title": "Page Core",
+    "fields": [
+        {
+            "key": "field_5e20dd17642fc",
+            "label": "",
+            "name": "category_type",
+            "type": "taxonomy",
+            "instructions": "Choose category to dynamically associate Articles, Listings, and Events with this Core Page",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "HunchSchemaProperty": "",
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-core-pages.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1584728386
+}

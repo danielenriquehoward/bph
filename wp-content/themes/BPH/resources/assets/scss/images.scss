@@ -1,0 +1,90 @@
+.carousel-cell {
+  min-height: 100%;
+  display: flex;
+}
+
+.size-16x9 {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 56.25%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+.pswp__caption__center {
+  max-width: 420px;
+  font-size: 18px;
+  padding: 12px;
+  line-height: 18px;
+  font-family: $sans-bold;
+  color: #fff;
+}
+
+.wp-caption.aligncenter{
+  margin: 0 auto;
+  width: 100%;
+  img {
+    width: 100%;
+    margin: 10px 0 15px;
+  }
+}
+
+.wp-caption.alignleft {
+  float: left;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 100%;
+  img {
+    width: 100%;
+    margin: 10px 0 15px;
+  }
+}
+
+.wp-caption.alignright {
+  float: right;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  width: 100%;
+  img {
+    width: 100%;
+    margin: 10px 0 15px;
+  }
+}
+
+p.wp-caption-text {
+  font-family: $serif-italic;
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 25px;
+  line-height: 1.35;
+}
+
+img.aligncenter {
+  margin: 0 auto;
+}
+
+img.alignleft {
+  float: left;
+  margin-top: 5px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+img.alignright {
+  float: right;
+  margin-top: 5px;
+  margin-left: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}

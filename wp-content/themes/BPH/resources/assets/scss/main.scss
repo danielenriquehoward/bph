@@ -1,0 +1,32 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@import "/variables";
+
+@import "./mixins.scss"; // for tailwind @apply
+
+// @import "../../../node_modules/sal.js/dist/sal";
+
+@import "./fonts.scss";
+
+// @import "./vendor/icomoon.scss";
+
+@import "../../views/components/index.scss";
+
+@import "./accessibility.scss";
+
+@import "./breakpoints.scss";
+
+@import "./utilities.scss";
+
+@import "./helpers.scss";
+
+html {
+  background-color: #dfdfdf;
+}
+body {
+    background-color: #fff;
+}

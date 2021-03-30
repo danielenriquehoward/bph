@@ -1,0 +1,42 @@
+{
+  "name": "tailbase",
+  "version": "2.0.0",
+  "description": "Awesome WordPress starter theme.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "Bellweather",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^1.0.1",
+    "glob": "^7.1.6",
+    "glob-all": "^3.2.1",
+    "import-glob-loader": "^1.1.0",
+    "laravel-mix": "^5.0.4",
+    "purgecss-webpack-plugin": "^1.2.0",
+    "sass": "^1.26.8",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "fstream": "^1.0.12",
+    "jquery": "^3.5.1",
+    "js-yaml": "^3.13.1",
+    "lottie-web": "^5.7.6",
+    "node-sass": "^4.14.1",
+    "tailwind-bootstrap-grid": "^2.1.0",
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-accessibility": "^1.0.0",
+    "vue": "^2.6.11",
+    "vue-observe-visibility": "^1.0.0",
+    "whatwg-fetch": "^3.6.2"
+  }
+}
