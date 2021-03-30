@@ -11,27 +11,6 @@ require_once( __DIR__ . '/functions/acf.php' );
 
 require_once( __DIR__ . '/functions/api.php' );
 
-// // require_once( __DIR__ . '/functions/ajax.php' );
-
-// // require_once( __DIR__ . '/functions/ajax-paginate.php' );
-
-// // require_once( __DIR__ . '/functions/ajax-date.php' );
-
-
-// require_once( __DIR__ . '/functions/global-monday.php' );
-
-// require_once( __DIR__ . '/functions/backend-filtering.php' );
-
-
-
-
-// index medium images for algolia
-// add_filter('algolia_post_images_sizes', function($sizes) {
-//   $sizes[] = 'medium';
-
-//   return $sizes;
-// });
-
 
 add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
 
@@ -73,21 +52,6 @@ function wpdocs_excerpt_more( $more ) {
   return '...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
-
-// hide Posts for sidebar in wp-admin
-// function post_remove () {
-//   remove_menu_page('edit.php');
-// }
-
-// add_action('admin_menu', 'post_remove');
-
-
-// function remove_wp_nodes () {
-//   global $wp_admin_bar;
-//   $wp_admin_bar->remove_node( 'new-post' );
-// }
-
-// add_action( 'admin_bar_menu', 'remove_wp_nodes', 999 );
 
 
 /* Timber functions*/
