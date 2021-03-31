@@ -1,0 +1,48 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+
+{# <div class="my-24">
+    {% for building in buildings %}
+       <div> {{building.slug}}</div>
+    {% endfor %}
+</div> #}
+
+<section class="container">
+    <div class="col-12 bio2 d-none">
+        <div class="row">
+            <div class="luxury-image col-md-5 d-none d-md-block"><i class="far fa-building"></i></div>
+            <div class="luxury-header col-md-7 col-12 " >
+                <h3>Boston Premium Condominium Buildings</h3>
+            </div>
+        </div>
+        <h1 class="buildings-header d-block">Boston Premium Condominium Buildings</h1>
+        <div class="buildings-box align-items-center justify-content-between gallery">
+
+            {% for building in buildings %}
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card mb-3">
+                        <img class="card-img-top index-card-img" alt=""  src="{{building.image_url}}">
+                        <div class="card-body index-card">
+                            <p>{{building.title}} <span class="float-right"><a href={{building.slug}}>More Info</a></span></p>
+                            <hr>
+                            <div id="card-description">
+								{{building.address}}<br>{{building.neighborhood}}
+							</div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+	</div>
+
+
+</section>
+  
+{% endblock %}
+
+

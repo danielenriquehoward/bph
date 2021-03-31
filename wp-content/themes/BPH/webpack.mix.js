@@ -3,14 +3,14 @@ const clean = require("clean-webpack-plugin");
 const tailwindcss = require("tailwindcss");
 const glob = require("glob-all");
 const purgecss = require("purgecss-webpack-plugin");
-const whitelistPath = require('./build/whitelist');
+const whitelistPath = require("./build/whitelist");
 
 /* ==========================================================================
 Config
 ========================================================================== */
 const config = {
-  siteUrl: "baseboot.local",
-  proxyUrl: "http://baseboot.local/",
+  siteUrl: "bph.local",
+  proxyUrl: "http://bph.local/",
   port: 4444,
   openOnStart: true,
   //   pathToLocalSSLCert: "",
@@ -108,9 +108,7 @@ if (!mix.inProduction()) {
   mix
     .webpackConfig({
       devtool: "source-map",
-      plugins: [
-        new clean(["dist"])
-      ]
+      plugins: [new clean(["dist"])]
     })
     .sourceMaps();
 }
@@ -166,7 +164,7 @@ if (mix.inProduction()) {
         ],
         whitelist: whitelistPath.whitelist,
         whitelistPatterns: whitelistPath.whitelistPatterns,
-        whitelistPatternsChildren: whitelistPath.whitelistPatternsChildren,
+        whitelistPatternsChildren: whitelistPath.whitelistPatternsChildren
       })
     ],
     module: {
