@@ -1,6 +1,41 @@
 <?php
 
 function create_post_types(){
+  
+  register_post_type('buildings',
+
+  array('labels' => array(
+
+
+    'name' => _x( 'Buildings', 'taxonomy general name', 'textdomain' ),
+    'singular_name' => _x( 'Buildings', 'taxonomy singular name', 'textdomain' ),
+    'search_items'               => __( 'Search Buildings', 'textdomain' ),
+    'popular_items'              => __( 'Popular Buildings', 'textdomain' ),
+    'all_items'                  => __( 'All Buildings', 'textdomain' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Building', 'textdomain' ),
+    'update_item'                => __( 'Update Building', 'textdomain' ),
+    'add_new_item'               => __( 'Add New Building', 'textdomain' ),
+    'new_item_name'              => __( 'New Building Name', 'textdomain' ),
+    'separate_items_with_commas' => __( 'Separate Buildings with commas', 'textdomain' ),
+    'add_or_remove_items'        => __( 'Add or remove Buildings', 'textdomain' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Buildings', 'textdomain' ),
+    'not_found'                  => __( 'No Buildings found.', 'textdomain' ),
+    'menu_name'                  => __( 'Buildings', 'textdomain' ),
+
+
+  ),
+  'public' => true,
+  'has_archive' => false,
+  'query_var' => false,
+  'hierarchical' => false,
+  'rewrite' => false,
+  
+  )
+
+
+);
 
   register_post_type(
     'articles',
@@ -31,7 +66,7 @@ function create_post_types(){
       'menu_icon' => 'dashicons-media-document',
       'supports' => array('editor','title','excerpt','thumbnail'),
       // "cptp_permalink_structure" => "/%category%/%postname%/",
-      // 'rewrite' => array( 'slug' => '/', 'with_front'=> false )
+      'rewrite' => array( 'slug' => '/blogs', 'with_front'=> false )
       // 'rewrite' => array(
       //   'slug' => '/',
       //   'permastruct' => '/%category%/%postname%/'

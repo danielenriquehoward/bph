@@ -5,3 +5,5 @@ package-lock.json
 .DS_Store
 .idea
 .vscode
+composer.phar
+.htaccess
