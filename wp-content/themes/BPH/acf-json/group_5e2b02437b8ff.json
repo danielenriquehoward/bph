@@ -1045,7 +1045,7 @@
                 "flip-left": "Flip Left",
                 "flip-right": "Flip Right"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 1,
@@ -1995,56 +1995,12 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "guides"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
                 "value": "page"
-            }
-        ],
-        [
+            },
             {
                 "param": "post_type",
-                "operator": "==",
-                "value": "articles"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "events"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "members-blog"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "convention-blog"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "foundation-blog"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "press-releases"
+                "operator": "!=",
+                "value": "page"
             }
         ]
     ],
@@ -2054,7 +2010,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1589288562
+    "modified": 1617380253
 }
