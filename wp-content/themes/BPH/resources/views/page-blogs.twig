@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+
+{# <div class="my-24">
+    {% for building in buildings %}
+       <div> {{building.slug}}</div>
+    {% endfor %}
+</div> #}
+
+<section class="container">
+  {% for blog in all_blogs %}
+  <div>
+  <h1>{{blog.post_title}}</h1>
+  <div> {{blog.post_content}}</div>
+ 
+  
+  </div>
+        
+  {% endfor %}
+
+
+</section>
+  
+{% endblock %}
+
+

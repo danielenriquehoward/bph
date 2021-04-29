@@ -33,6 +33,7 @@ foreach($all_buildings->posts as $building){
 
     $building_object->id = $building->ID;
     $building_object->slug = $building->post_name;
+    $building_object->link = get_permalink($building->ID);
     $building_object->title = $building->post_title;
     // $building_object->description = $building->post_content;
     $building_object->image_url = get_post_meta($building->ID, 'image_url')[0];

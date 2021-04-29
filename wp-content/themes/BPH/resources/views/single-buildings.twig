@@ -1,0 +1,60 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+
+{# <div class="my-24">
+    {% for building in buildings %}
+       <div> {{building.slug}}</div>
+    {% endfor %}
+</div> #}
+
+<section class="container">
+	<h1 >{{post.post_title}}</h1>
+
+	<div >
+		<div >
+			<img alt="{{post.post_content}} Boston" src={{post.image_url}}>
+		</div>
+		<div class="">
+			<p class="">{{post.post_content}}</p>
+			<a class="" href="/contacts/new">Request Viewing/Info</a>
+		</div>
+	</div>
+	<div>
+		<h3 class="">Building Details</h3>
+		<div class=" ">
+			<ul class="">
+			
+                <li class="">
+                    <strong>Price</strong>:  <span class="float-right">{{post.info_price}}</span>
+                </li>
+                  <li class="">
+                    <strong>Floors</strong>:  <span class="float-right">{{post.info_floors}}</span>
+                </li>
+                  <li class="">
+                    <strong>Units</strong>:  <span class="float-right">{{post.info_units}}</span>
+                </li>
+                  <li class="">
+                    <strong>Address</strong>:  <span class="float-right">{{post.info_address}}</span>
+                </li>
+                  <li class="">
+                    <strong>Neighborhood</strong>:  <span class="float-right">{{post.info_neighborhood}}</span>
+                </li>
+								
+			</ul>
+			<div class="col-lg-6 col-12 mb-2">
+				<div id="map"></div>
+			</div>
+		</div>
+		<div class="row">
+			
+		</div>
+	</div> 
+	{# <%include ../partials/form %> #}
+</section>
+  
+{% endblock %}
+
+

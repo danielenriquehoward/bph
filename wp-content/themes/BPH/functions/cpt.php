@@ -30,7 +30,7 @@ function create_post_types(){
   'has_archive' => false,
   'query_var' => false,
   'hierarchical' => false,
-  'rewrite' => false,
+  'rewrite' => array( 'slug' => '/buildings', 'with_front'=> false )
   
   )
 
@@ -64,6 +64,7 @@ function create_post_types(){
       'hierarchical' => false,
       'taxonomies' => array('post_tag', 'what_to_do', 'category'),
       'menu_icon' => 'dashicons-media-document',
+      'show_in_rest' => true,
       'supports' => array('editor','title','excerpt','thumbnail'),
       // "cptp_permalink_structure" => "/%category%/%postname%/",
       'rewrite' => array( 'slug' => '/blogs', 'with_front'=> false )
