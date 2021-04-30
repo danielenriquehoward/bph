@@ -142,6 +142,37 @@ function create_post_types(){
     )
   );
 
+  register_post_type(
+    'bio',
+    array(
+      'labels' => array(
+        'name'                       => _x( 'Bio', 'taxonomy general name', 'textdomain' ),
+        'singular_name'              => _x( 'Bio', 'taxonomy singular name', 'textdomain' ),
+        'search_items'               => __( 'Search Bio', 'textdomain' ),
+        'popular_items'              => __( 'Popular Bio', 'textdomain' ),
+        'all_items'                  => __( 'All Bio', 'textdomain' ),
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'edit_item'                  => __( 'Edit Bio', 'textdomain' ),
+        'update_item'                => __( 'Update Bio', 'textdomain' ),
+        'add_new_item'               => __( 'Add New Bio', 'textdomain' ),
+        'new_item_name'              => __( 'New Bio Name', 'textdomain' ),
+        'separate_items_with_commas' => __( 'Separate Bio with commas', 'textdomain' ),
+        'add_or_remove_items'        => __( 'Add or remove Bio', 'textdomain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used Bio', 'textdomain' ),
+        'not_found'                  => __( 'No Bio found.', 'textdomain' ),
+        'menu_name'                  => __( 'Bio', 'textdomain' ),
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'taxonomies' => array('post_tag', 'what_to_do', 'category'),
+      // 'menu_icon' => 'dashicons-location-alt',
+      'supports' => array('none',),
+      // 'rewrite' => array( 'slug' => 'guides', 'with_front'=> true )
+    )
+  );
+
 
 
   register_post_type(

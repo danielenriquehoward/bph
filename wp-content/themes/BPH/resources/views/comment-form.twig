@@ -1,10 +1,10 @@
 <div id="respond" class="comment-form-wrapper">
   <form id="commentform" class="comment-form" method="post" action="{{ site.wp_link }}/wp-comments-post.php">
-    {% if user %}
+    {# {% if user %}
       <input type="hidden" name="author" value="{{ user.name }}">
       <input type="hidden" name="email" value="{{ user.email }}">
       <input type="hidden" name="url" value="{{ user.link }}">
-    {% else %}
+    {% else %} #}
 
       {# Name input field #}
       <div class="field">
@@ -38,7 +38,7 @@
           </span>
         </div>
       </div>
-    {% endif %}
+    {# {% endif %} #}
 
     {# Comment input field #}
     <div class="field">

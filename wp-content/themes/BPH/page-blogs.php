@@ -22,7 +22,7 @@ $all_blogs= new WP_Query($args);
 
 
 
-$context['all_blogs'] = $all_blogs->posts;
+$context['all_blogs'] = $all_blogs;
 
 dump($context);
 
