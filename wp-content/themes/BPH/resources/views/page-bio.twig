@@ -1,5 +1,7 @@
 {% extends "base.twig" %} {% block content %}
 
+
+
 <section class="container">
   <div>
     <div>
@@ -7,29 +9,30 @@
     </div>
     <div>
       <h3>Jon Kumin</h3>
-      <p>{{ acf.title }}</p>
+      <p>{{ bio_acf.title }}</p>
     </div>
     <div>
       <div>
-        <p>{{ acf.phone_number }}</p>
-        <p>{{ acf.email }}</p>
-        <p>{{ acf.company_profile }}</p>
+        <p>{{ bio_acf.phone_number }}</p>
+        <p>{{ bio_acf.email }}</p>
+        <p>{{ bio_acf.company_profile }}</p>
       </div>
       <div>
-        <p>{{ acf.company }}</p>
-        <img alt="company logo" src="{{ acf.company_logo.url }}" />
+        <p>{{ bio_acf.company }}</p>
+        <img alt="company logo" src="{{ bio_acf.company_logo.url }}" />
       </div>
     </div>
   </div>
 
   <div>
+    <!-- {% include "components/contact-form.twig" %} -->
     <!-- col -->
     <div>
-      <p>{{ acf.bio }}</p>
+      <p>{{ bio_acf.bio }}</p>
     </div>
     <div>
       <h3>Awards</h3>
-      {% for award in acf.awards %}
+      {% for award in bio_acf.awards %}
       <div>
         <div>icon</div>
         <div>
@@ -41,6 +44,29 @@
       {% endfor %}
     </div>
 
+    <div>
+        <div>Recent Sales</div>
+        {% for property in sold  %}
+            <div>
+                <img src="{{property.image}}">
+                <div>
+                    <div>
+                        SOLD
+                    </div>
+                    <div>
+                        ${{property.price}}
+                    </div>
+                    <div>
+                        {{property.address.street_address}}, {{property.address.units}} <br>
+                        {{property.address.city}}, {{property.address.zip_code}}<br>
+                        {{property.unit_info}}
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+
     <!-- testimonial col -->
     <div>
         {% filter shortcodes %}
@@ -49,7 +75,7 @@
       <div>
         <h3>Testimonials</h3>
         <div>
-          {% for testimonial in acf.testimonials %}
+          {% for testimonial in bio_acf.testimonials %}
           <div>
             <p>{{ testimonial.testimonial_text }}</p>
             <div>{{ testimonial.name }} ({{ testimonial.neighborhood }})</div>

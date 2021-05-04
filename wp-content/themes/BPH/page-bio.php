@@ -8,7 +8,7 @@ $context         = Timber::context();
 $post            = new TimberPost();
 $context['post'] = $post;
 
-$args = array(
+$args1 = array(
     'numberposts' => 1,
     'post_type' => 'bio',
     
@@ -16,10 +16,48 @@ $args = array(
      
 );
 
-$bio= new WP_Query($args);
+$args2 = array(
+    'numberposts' => -1,
+    'post_type' => 'recently sold',
+    
+    
+     
+);
 
 
 
+$bio= new WP_Query($args1);
+$recent_sales = new WP_QUERY($args2);
+
+$sold_array = [];
+
+foreach($recent_sales->posts as $sale){
+
+    $sale_object =  new stdClass();
+    $sale_object->title = $sale->post_name;
+
+    $fields = get_fields($sale->ID);
+
+    $sale_object->address = $fields['address'];
+    $sale_object->price = number_format($fields['price']);
+    $sale_object->unit_info = $fields['unit_info'];
+
+    $sale_object->image = wp_get_attachment_image_src( $fields['image'], $default)[0];
+
+
+
+    array_push($sold_array, $sale_object);
+
+}
+
+
+
+
+
+
+
+
+$context['buildings'] = $buildings_array;
 
 
 
@@ -28,8 +66,10 @@ $bio= new WP_Query($args);
 $id= $bio->post->ID;
 
 
+$context['sold'] = $sold_array;
 
+$context['bio_acf'] = get_fields($id);
 
-$context['acf'] = get_fields($id);
-dump($context);
+// dump($context);
+
 Timber::render('page-bio.twig', $context);

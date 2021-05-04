@@ -13,9 +13,8 @@ $context['cancel_link'] = get_cancel_comment_reply_link(__('Cancel reply', 'tail
 $args = array(
            'numberposts' => -1,
            'post_type' => 'buildings',
-        //    'meta_query' => array(
-        //     array( "key" => "brand_name", "value" => $title )
-        //   ),
+           
+           
            
             
        );
@@ -52,7 +51,7 @@ foreach($all_buildings->posts as $building){
 
 }
 
-dump($buildings_array);
+
 
 $context['buildings'] = $buildings_array;
 

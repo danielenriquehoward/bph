@@ -22,8 +22,8 @@ $all_blogs= new WP_Query($args);
 
 
 
-$context['all_blogs'] = $all_blogs;
+$context['all_blogs'] = $all_blogs->posts;
 
-dump($context);
+// dump($all_blogs->posts);
 
 Timber::render('page-blogs.twig', $context);

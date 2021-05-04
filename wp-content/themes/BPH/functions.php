@@ -9,6 +9,8 @@ require_once( __DIR__ . '/functions/bw.php' );
 
 require_once( __DIR__ . '/functions/acf.php' );
 
+require_once( __DIR__ . '/functions/backend.php' );
+
 require_once( __DIR__ . '/functions/api.php' );
 
 

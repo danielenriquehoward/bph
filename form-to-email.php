@@ -1,21 +1,33 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "zach.g.lewton@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $phone_number = $_POST['phone_number'];
-    $request_source = $_POST['request_source'];
-    $subject = $_POST['subject'];
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+<?php
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$phone_number,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
+    echo "hi";
+
+    if(isset($_POST['submit_btn'])){ //check if form was submitted
+
+
+
+        $name = $_POST['contact_name'];
+        $visitor_email = $_POST['contact_email'];
+        $phone_number = $_POST['phone_number'];
+        $property = $_POST['property'];
+        $message = $_POST['message'];
+    
+        $email_from = 'zach.g.lewton@gmail.com';
+    
+        $email_subject = "Info Request";
+    
+        $email_body = "You have received a new message from the user $name.\n Here is the message:\n {$message}";
+                    
+        $to = "zach.g.lewton@gmail.com";
+    
+        $headers = "From: $email_from \r\n";
+                    
+        $headers .= "Reply-To: $visitor_email \r\n";
+                    
+        mail($to,$email_subject,$email_body,$headers);
+
+        echo "sup";
+        
+    }    
+
+?> 
