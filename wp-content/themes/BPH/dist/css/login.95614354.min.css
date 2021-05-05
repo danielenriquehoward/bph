@@ -1,49 +1,49 @@
 .text-primary {
-  color: #004270 !important;
+  color: #5068a9 !important;
 }
 
 a.text-secondary {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus, a.text-secondary:active {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 .text-secondary {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 .text-secondary:hover, .text-secondary:focus, .text-secondary:active {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 .bg-secondary {
-  background: #FFD53F;
+  background: rgba(243, 246, 245, 0.8);
 }
 
 .bg-primary {
-  background: #004270;
+  background: #5068a9;
 }
 
 .bg-primary-dark {
-  background: #0A202E;
+  background: #0a202e;
 }
 
 .text-primary-dark {
-  color: #0A202E;
+  color: #0a202e;
 }
 
 .border-primary {
-  border-color: #004270 !important;
+  border-color: #5068a9 !important;
 }
 
 .border-secondary {
-  border-color: #FFD53F !important;
+  border-color: rgba(243, 246, 245, 0.8) !important;
 }
 
 body.login {
-  background: #004270;
+  background: #5068a9;
 }
 
 body.login #nav a, body.login #backtoblog a {
@@ -74,27 +74,27 @@ body.login div#login h1 a {
 }
 
 form#loginform p.submit input#wp-submit {
-  background: #004270;
-  border-color: #003357 #00243d #00243d;
-  -webkit-box-shadow: 0 1px 0 #00243d;
-  box-shadow: 0 1px 0 #00243d;
+  background: #5068a9;
+  border-color: #485d98 #405386 #405386;
+  -webkit-box-shadow: 0 1px 0 #405386;
+  box-shadow: 0 1px 0 #405386;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 -1px 1px #00243d, 1px 0 1px #00243d, 0 1px 1px #00243d, -1px 0 1px #00243d;
+  text-shadow: 0 -1px 1px #405386, 1px 0 1px #405386, 0 1px 1px #405386, -1px 0 1px #405386;
 }
 
 input[type="checkbox"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
-  border-color: #004270;
-  -webkit-box-shadow: 0 0 2px #00243d;
-  box-shadow: 0 0 2px #00243d;
+  border-color: #5068a9;
+  -webkit-box-shadow: 0 0 2px #405386;
+  box-shadow: 0 0 2px #405386;
 }
 
 input[type="checkbox"]:checked:before,
 input[type="text"]:checked:before,
 input[type="password"]:checked:before {
-  color: #004270;
+  color: #5068a9;
 }
 
-/*# sourceMappingURL=login.52052210.min.css.map*/
+/*# sourceMappingURL=login.95614354.min.css.map*/

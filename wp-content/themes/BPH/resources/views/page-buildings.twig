@@ -1,48 +1,41 @@
-{% extends "base.twig" %}
+{% extends "base.twig" %} {% block content %} {#
+<div class="my-24">
+  {% for building in buildings %}
+  <div>{{ building.slug }}</div>
+  {% endfor %}
+</div>
+#}
 
-{% block content %}
+<section class="container mx-auto text-primary">
+  <div class=" px-10 py-10">
+    <h1 class="buildings-header text-3xl pb-2 ">
+      Boston Premium Condominium Buildings
+    </h1>
+    <div class=" py-6 grid lg:grid-cols-3 md:grid-cols-2 gap-x-8 gap-y-5 p-5  ">
+      {% for building in buildings %}
 
+      <div class="w-full building-card border rounded ">
+        <img class="  " alt="" src="{{ building.image_url }}" />
+        <div class="bg-secondary p-5">
+          <div class=" w-full overflow-hidden mb-4">
+            <p class="">
+              {{ building.title }}
+              <a class="more-info float-right  p-1" href="{{ building.link }}"
+                >More Info</a
+              >
+            </p>
+          </div>
 
-
-{# <div class="my-24">
-    {% for building in buildings %}
-       <div> {{building.slug}}</div>
-    {% endfor %}
-</div> #}
-
-<section class="container">
-    <div class="col-12 bio2 d-none">
-        <div class="row">
-            <div class="luxury-image col-md-5 d-none d-md-block"><i class="far fa-building"></i></div>
-            <div class="luxury-header col-md-7 col-12 " >
-                <h3>Boston Premium Condominium Buildings</h3>
-            </div>
+          <hr />
+          <div class="mt-4 h-12 text-base overflow-hidden">
+            {{ building.address }}<br />{{ building.neighborhood }}
+          </div>
         </div>
-        <h1 class="buildings-header d-block">Boston Premium Condominium Buildings</h1>
-        <div class="buildings-box align-items-center justify-content-between gallery">
+      </div>
 
-            {% for building in buildings %}
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card mb-3">
-                        <img class="card-img-top index-card-img" alt=""  src="{{building.image_url}}">
-                        <div class="card-body index-card">
-                            <p>{{building.title}} <span class="float-right"><a href={{building.link}}>More Info</a></span></p>
-                            <hr>
-                            <div id="card-description">
-								{{building.address}}<br>{{building.neighborhood}}
-							</div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-
-        </div>
-
-	</div>
-
-
+      {% endfor %}
+    </div>
+  </div>
 </section>
-  
+
 {% endblock %}
-
-

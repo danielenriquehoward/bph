@@ -1,0 +1,23 @@
+.building-card {
+  max-height: 347px;
+  overflow: hidden;
+  img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .more-info {
+    border: 1px solid $primary;
+    border-radius: 5px;
+  }
+
+  .more-info:hover {
+    background: $background-dark;
+    color: white;
+  }
+}
+
+.buildings-header {
+  border-bottom: 2px solid $primary-light;
+}

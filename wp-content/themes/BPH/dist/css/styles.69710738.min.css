@@ -19487,47 +19487,47 @@ video {
 }
 
 .text-primary {
-  color: #004270 !important;
+  color: #5068a9 !important;
 }
 
 a.text-secondary {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus, a.text-secondary:active {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 .text-secondary {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 .text-secondary:hover, .text-secondary:focus, .text-secondary:active {
-  color: #FFD53F !important;
+  color: rgba(243, 246, 245, 0.8) !important;
 }
 
 .bg-secondary {
-  background: #FFD53F;
+  background: rgba(243, 246, 245, 0.8);
 }
 
 .bg-primary {
-  background: #004270;
+  background: #5068a9;
 }
 
 .bg-primary-dark {
-  background: #0A202E;
+  background: #0a202e;
 }
 
 .text-primary-dark {
-  color: #0A202E;
+  color: #0a202e;
 }
 
 .border-primary {
-  border-color: #004270 !important;
+  border-color: #5068a9 !important;
 }
 
 .border-secondary {
-  border-color: #FFD53F !important;
+  border-color: rgba(243, 246, 245, 0.8) !important;
 }
 
 .blue-button {
@@ -19824,24 +19824,24 @@ a.visually-hidden.focusable.skip-link {
 }
 
 hr {
-  background: #004270;
+  background: #5068a9;
   height: 1px;
   width: 100%;
 }
 
 hr.blocks {
-  background: #004270;
+  background: #5068a9;
   height: 1px;
 }
 
 hr.primary {
-  background: #004270;
+  background: #5068a9;
   height: 1px;
   border: 0;
 }
 
 hr.secondary {
-  background: #FFD53F;
+  background: rgba(243, 246, 245, 0.8);
   height: 1px;
   border: 0;
 }
@@ -19856,7 +19856,7 @@ iframe {
 
 .table strong, table strong {
   font-family: "GT-America Medium", sans-serif;
-  color: #004270;
+  color: #5068a9;
 }
 
 .table td, .table th, table td, table th {
@@ -19994,7 +19994,7 @@ iframe {
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: #0A202E;
+  background-color: #0a202e;
   color: #e3b28e;
   padding: 0.2rem 2rem;
   z-index: 10000;
@@ -20002,7 +20002,32 @@ iframe {
 }
 
 .current-template-file-name a {
-  color: #FFD53F;
+  color: rgba(243, 246, 245, 0.8);
+}
+
+.building-card {
+  max-height: 347px;
+  overflow: hidden;
+}
+
+.building-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.building-card .more-info {
+  border: 1px solid #5068a9;
+  border-radius: 5px;
+}
+
+.building-card .more-info:hover {
+  background: #5068a9;
+  color: white;
+}
+
+.buildings-header {
+  border-bottom: 2px solid rgba(162, 174, 207, 0.8);
 }
 
 html {
@@ -95085,4 +95110,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.54513009.min.css.map*/
+/*# sourceMappingURL=styles.69710738.min.css.map*/

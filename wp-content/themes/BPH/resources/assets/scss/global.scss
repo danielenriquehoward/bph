@@ -13,7 +13,10 @@
 //   }
 // }
 
-// .h2, h2 { font-size: 1.3rem; }
+// .h2,
+// h2 {
+//   font-size: 1.3rem;
+// }
 
 // #main-content {
 //   // background: #fff;
@@ -30,9 +33,11 @@
 // }
 
 // a.no-underline {
-//  &:hover, &:active, &:focus {
-//    text-decoration: none;
-//  }
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     text-decoration: none;
+//   }
 // }
 
 // a {
@@ -54,7 +59,7 @@
 
 // #pagination-trigger-prev,
 // #pagination-trigger {
-//   transition: all .5s;
+//   transition: all 0.5s;
 //   &.hide-trigger {
 //     font-size: 0px;
 //     max-width: 0px;
@@ -82,7 +87,7 @@
 //   border-radius: 50%;
 //   color: $primary;
 //   border-color: $primary;
-//   transition: .2s;
+//   transition: 0.2s;
 //   min-width: 36px;
 //   max-width: 36px;
 //   &:hover {
@@ -101,8 +106,8 @@
 //   width: 25px;
 //   height: 11px;
 //   margin: 0 12px;
-//   &:after{
-//     content: '';
+//   &:after {
+//     content: "";
 //     position: absolute;
 //     top: 0;
 //     left: 50%;
@@ -111,8 +116,8 @@
 //     background: black;
 //     transform: skew(0deg, 45deg);
 //   }
-//   &:before{
-//     content: '';
+//   &:before {
+//     content: "";
 //     position: absolute;
 //     top: 0;
 //     left: 0;
@@ -126,18 +131,20 @@
 // //////////////  MISC /////////////////
 
 // a.download-guide {
-//   transition: transform .35s;
+//   transition: transform 0.35s;
 //   transform: scale(1);
-//   &:hover, &:focus, &:active {
+//   &:hover,
+//   &:focus,
+//   &:active {
 //     text-decoration: none;
 //     transform: scale(1.1);
 //   }
 // }
 
 // a.page-tease {
-//   transition: color .2s;
+//   transition: color 0.2s;
 //   .icon-arrow-circle-right:before {
-//     transition: background .2s;
+//     transition: background 0.2s;
 //     border-radius: 50%;
 //   }
 //   // .sans-bold {
@@ -170,8 +177,12 @@
 // }
 
 // @keyframes ajaxFade {
-//   from {opacity: 0;}
-//   to {opacity: 1;}
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
 // }
 
 // //////////////  B2B CTA /////////////////
@@ -179,7 +190,7 @@
 // .b2b-cta {
 //   .b2b-cta-btn {
 //     &:hover {
-//       transition: all .2s;
+//       transition: all 0.2s;
 //       text-decoration: none;
 //       background: $edgar;
 //       border-color: #fff;
@@ -216,7 +227,7 @@
 //     position: relative;
 //     height: 6.5rem;
 //     top: -5rem;
-//     transition: all .2s;
+//     transition: all 0.2s;
 //   }
 //   &:hover {
 //     .weekend-nav-button {
@@ -227,7 +238,7 @@
 // }
 
 // .weekend-nav-button {
-//   transition: all .35s;
+//   transition: all 0.35s;
 //   text-transform: uppercase;
 //   letter-spacing: 1px;
 //   font-size: 35px;
@@ -254,7 +265,7 @@
 // }
 
 // .day-of-weekend {
-//   line-height: .9;
+//   line-height: 0.9;
 //   font-size: 100px;
 //   letter-spacing: 5px;
 // }
@@ -294,10 +305,10 @@
 //   .this-weekend-dates-wrapper {
 //     padding-bottom: 50px;
 //     .weekend-nav-button {
-//       transition: color .3s, background .3s;
+//       transition: color 0.3s, background 0.3s;
 //       cursor: pointer;
 //       width: 80px;
-//       &:hover{
+//       &:hover {
 //         color: $neon;
 //         background: $concrete;
 //       }
@@ -323,7 +334,7 @@
 // }
 // .big-number-date.for-mobile {
 //   font-size: 2.5rem;
-//   line-height: .8;
+//   line-height: 0.8;
 // }
 
 // ////////////// DATE PICKER //////////////////////
@@ -335,15 +346,16 @@
 //   max-height: 0px;
 //   margin: 0 auto;
 // }
-// .datepicker-parent{
+// .datepicker-parent {
 //   max-height: 46px;
 // }
-// .datepicker{
+// .datepicker {
 //   min-height: 47px;
 // }
-// .date-from,.date-to{
+// .date-from,
+// .date-to {
 //   cursor: pointer;
-//   transition: background .5s, color .5s;
+//   transition: background 0.5s, color 0.5s;
 //   &:hover {
 //     color: black;
 //     background: $vb-pale-pink;
@@ -352,7 +364,7 @@
 
 // #date-trigger {
 //   cursor: pointer;
-//   transition: all .5s;
+//   transition: all 0.5s;
 //   &:hover {
 //     color: $vb-pale-pink;
 //     letter-spacing: 1.4px;
@@ -369,12 +381,20 @@
 // //// LOADER /////////
 
 // @keyframes fadein {
-//   from { opacity: 0; }
-//   to   { opacity: 1; }
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
 // }
 // @keyframes fadeout {
-//   from { opacity: 1; }
-//   to   { opacity: 0; }
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
 // }
 // .ajax-window {
 //   animation: fadein 1s;
@@ -393,7 +413,7 @@
 //     border-radius: 0;
 //     width: 10%;
 //     margin: 0px;
-//     transition: background .5s, opacity .5s;
+//     transition: background 0.5s, opacity 0.5s;
 //     .flickity-button-icon {
 //       margin: 0 0 0 auto;
 //       padding-top: 15px;
@@ -431,14 +451,14 @@
 
 // .guide-card {
 //   &:hover {
-//     opacity: .8;
+//     opacity: 0.8;
 //     text-decoration: none;
 //   }
 // }
 
-// .page-tease-small{
+// .page-tease-small {
 //   .card-text-box {
-//     background: rgba(255, 255, 255, .8);
+//     background: rgba(255, 255, 255, 0.8);
 //   }
 //   .image-container {
 //     overflow: hidden;
@@ -461,7 +481,7 @@
 // }
 
 // #hero.has-video {
-//   .hero-overlay-bottom{
+//   .hero-overlay-bottom {
 //     height: calc(100% - 50px);
 //     img {
 //       height: 100%;
@@ -477,7 +497,7 @@
 
 // .sub-footer {
 //   .icon-chevron-up {
-//     transition: transform .5s;
+//     transition: transform 0.5s;
 //   }
 //   .opener {
 //     cursor: pointer;
@@ -493,12 +513,12 @@
 //         &:hover {
 //           transform: scale(1.2);
 //         }
-//         transition: transform .5s;
+//         transition: transform 0.5s;
 //         max-width: 200px;
 //         width: 100%;
 //         height: 100px;
 //         margin-bottom: 20px;
-//         transition: transform .5s;
+//         transition: transform 0.5s;
 //       }
 //     }
 //   }
@@ -545,12 +565,11 @@
 // .more-events {
 //   a {
 //     &:hover {
-//       transition: all .5s;
+//       transition: all 0.5s;
 //       background: $crab;
 //       color: #fff;
 //       text-decoration: none;
 //     }
-
 //   }
 // }
 

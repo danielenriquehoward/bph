@@ -1,13 +1,13 @@
 // COLORS
-$primary:        #004270;
-$secondary:      #FFD53F;
-$primary-dark:   #0A202E;
-$primary-light:  #d7dde3;
+$primary: #5068a9;
+$secondary: rgba(243, 246, 245, 0.8);
+// $secondary: #ffd53f;
+$background-dark: rgb(80, 104, 169);
+$primary-dark: #0a202e;
+$primary-light: rgba(162, 174, 207, 0.8);
 
 // HELPER URL
-$images: '../images';
-
-
+$images: "../images";
 
 .text-primary {
   color: $primary !important;
@@ -15,14 +15,18 @@ $images: '../images';
 
 a.text-secondary {
   color: $secondary !important;
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     color: $secondary !important;
   }
 }
 
 .text-secondary {
   color: $secondary !important;
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     color: $secondary !important;
   }
 }
@@ -50,5 +54,3 @@ a.text-secondary {
 .border-secondary {
   border-color: $secondary !important;
 }
-
-

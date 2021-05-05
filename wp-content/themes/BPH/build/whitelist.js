@@ -1,5 +1,4 @@
 module.exports = {
-
   /**
    * You can whitelist selectors to stop purgecss from removing them from your CSS
    *
@@ -242,7 +241,8 @@ module.exports = {
     "order-2",
     "order-3",
     "order-4",
-    "order-5"
+    "order-5",
+    "max-h-52"
   ],
   whitelistPatterns: [
     /^qs/,
@@ -267,7 +267,8 @@ module.exports = {
     /-button$/,
     /^overlay/,
     /^pswp/,
-    /^card/
+    /^card/,
+    /^h/
   ],
   whitelistPatternsChildren: []
 };
