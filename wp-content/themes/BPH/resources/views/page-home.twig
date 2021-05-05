@@ -1,1 +1,66 @@
-<div>{{ post.title }}</div>
+<section>
+  <div>
+    <div>
+      logo
+    </div>
+    <div>
+      <img /> bph logo
+      <img src="{{ company_logo }}" />
+    </div>
+    <div>
+      <img src="{{ featured_image }}" />
+    </div>
+    <div>
+      {{ post.post_content }}
+    </div>
+    <div>
+      Jon Kumin <br />
+      <ul>
+        <li>{{ contact_info.title }}</li>
+        <li>{{ contact_info.phone_number }}</li>
+        <li>{{ contact_info.email }}</li>
+        <li>{{ contact_info.company_profile }}</li>
+      </ul>
+    </div>
+    <div>
+      Affiliations
+      <ul>
+        {% for affiliation in affiliations %}
+
+        <li>{{ affiliation.affiliation_name }}</li>
+
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2>Luxury Properties</h2>
+    </div>
+    <div>
+      {% for building in buildings %}
+      <a href="{{ building.post_name }}">{{ building.post_title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!--- featured properties--->
+
+  <div>
+    <div>
+      <div>
+        <a href="/buildings">Browse Featured Properties</a>
+      </div>
+      <div>
+        {% for property in featured_properties %}
+        <div>
+          <a href="{{ property.slug }}">
+            <div>
+              <img alt="{{ property.title }}" src="{{ property.image }}" />
+              <h2>{{ property.title }}</h2>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

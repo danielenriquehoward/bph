@@ -1,29 +1,10 @@
 {
     "key": "group_608c20743f12f",
-    "title": "bio",
+    "title": "Bio",
     "fields": [
         {
-            "key": "field_608c209083da7",
-            "label": "title",
-            "name": "title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_608c225083db3",
-            "label": "company",
+            "label": "Company",
             "name": "company",
             "type": "text",
             "instructions": "",
@@ -41,89 +22,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_608c226283db4",
-            "label": "company logo",
-            "name": "company_logo",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_608c209883da8",
-            "label": "phone number",
-            "name": "phone_number",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_608c20cf83da9",
-            "label": "email",
-            "name": "email",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_608c20e783daa",
-            "label": "company profile",
-            "name": "company_profile",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_608c20f383dab",
-            "label": "bio",
+            "label": "Bio",
             "name": "bio",
             "type": "textarea",
             "instructions": "",
@@ -142,7 +42,7 @@
         },
         {
             "key": "field_608c210a83dac",
-            "label": "awards",
+            "label": "Awards",
             "name": "awards",
             "type": "repeater",
             "instructions": "",
@@ -295,5 +195,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619796678
+    "modified": 1620231817
 }

@@ -69,7 +69,9 @@ $id= $bio->post->ID;
 $context['sold'] = $sold_array;
 
 $context['bio_acf'] = get_fields($id);
+$context['contact_info'] = get_field('contact_info', 'option');
+$context['company_logo'] = wp_get_attachment_image_src(get_field('company_logo', 'option'), $default)[0];
 
-// dump($context);
+dump($context);
 
 Timber::render('page-bio.twig', $context);

@@ -12,6 +12,8 @@ $post                   = new TimberPost();
 $context['post']        = $post;
 
 $featured_properties = get_field('featured_properties', 'option');
+$context['contact_info'] = get_field('contact_info', 'option');
+$context['affiliations'] = get_field('affiliations', 'option');
 
 $featured_properties_array = [];
 
@@ -46,6 +48,9 @@ $buildings= new WP_Query($args);
 $context['featured_properties']        = $featured_properties_array;
 
 $context['buildings'] = $buildings->posts;
+
+$context['featured_image'] = wp_get_attachment_image_src($post->featured_image, $default)[0];
+$context['company_logo'] = wp_get_attachment_image_src(get_field('company_logo', 'option'), $default)[0];
 
 dump($context);
 Timber::render( 'page-home.twig' , $context );
