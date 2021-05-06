@@ -21,3 +21,45 @@
 .buildings-header {
   border-bottom: 2px solid $primary-light;
 }
+
+.single-building {
+  h1 {
+    border-bottom: 1px solid $primary;
+  }
+
+  .single-building-card {
+    .image-container {
+      height: 350px;
+      min-width: 350px;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .request-viewing-button {
+      border: 1px solid $primary;
+      border-radius: 5px;
+    }
+  }
+
+  .building-details {
+    #map {
+      height: 300px;
+      width: auto;
+    }
+
+    h3 {
+      border-bottom: 2px solid $primary-light;
+      border-top: 2px solid $primary-light;
+    }
+
+    .details-list {
+      li {
+        border-bottom: 2px solid $primary-light;
+        padding: 5px 0 5px 0;
+      }
+    }
+  }
+}

@@ -1,60 +1,108 @@
-{% extends "base.twig" %}
+{% extends "base.twig" %} {% block content %} {#
+<div class="my-24">
+  {% for building in buildings %}
+  <div>{{ building.slug }}</div>
+  {% endfor %}
+</div>
+#}
 
-{% block content %}
+<!-- Leaflet -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""
+/>
 
+<section class="container mx-auto text-primary max-w-screen-xl single-building">
+  <h1 class="py-4 text-4xl text-center">{{ post.post_title }}</h1>
 
+  <div class=" md:flex-row sm:flex-col flex single-building-card no-wrap">
+    <div class="md:w-5/12 sm:w-full p-6 image-container">
+      <img
+        class="min-w-full"
+        alt="{{ post.post_content }} Boston"
+        src="{{ post.image_url }}"
+      />
+    </div>
+    <div class="md:w-7/12 sm:w-full px-4 py-2 ">
+      <p
+        class="px-5 pt-5 lg:text-xl md:text-l sm:text-base mb-4 leading-normal"
+      >
+        {{ post.post_content }}
+      </p>
 
-{# <div class="my-24">
-    {% for building in buildings %}
-       <div> {{building.slug}}</div>
-    {% endfor %}
-</div> #}
+      <a
+        class="float-right mt-4 mr-5 p-2 text-lg request-viewing-button"
+        href="/contacts/new"
+        >Request Viewing/Info</a
+      >
+    </div>
+  </div>
+  <div class="building-details pb-40">
+    <h3 class="py-1 text-3xl text-center">Building Details</h3>
+    <div class=" px-5 py-3 flex">
+      <ul class="w-6/12 details-list px-6">
+        <li class="">
+          <strong>Price</strong>:
+          <span class="float-right">{{ post.info_price }}</span>
+        </li>
+        <li class="">
+          <strong>Floors</strong>:
+          <span class="float-right">{{ post.info_floors }}</span>
+        </li>
+        <li class="">
+          <strong>Units</strong>:
+          <span class="float-right">{{ post.info_units }}</span>
+        </li>
+        <li class="">
+          <strong>Address</strong>:
+          <span class="float-right">{{ post.info_address }}</span>
+        </li>
+        <li class="">
+          <strong>Neighborhood</strong>:
+          <span class="float-right">{{ post.info_neighborhood }}</span>
+        </li>
+      </ul>
+      <div class="w-3/6">
+        <div id="map"></div>
+      </div>
 
-<section class="container">
-	<h1 >{{post.post_title}}</h1>
+      <script
+        src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""
+      ></script>
+      <script>
+        var address = "{{post.info_address}}";
 
-	<div >
-		<div >
-			<img alt="{{post.post_content}} Boston" src={{post.image_url}}>
-		</div>
-		<div class="">
-			<p class="">{{post.post_content}}</p>
-			<a class="" href="/contacts/new">Request Viewing/Info</a>
-		</div>
-	</div>
-	<div>
-		<h3 class="">Building Details</h3>
-		<div class=" ">
-			<ul class="">
-			
-                <li class="">
-                    <strong>Price</strong>:  <span class="float-right">{{post.info_price}}</span>
-                </li>
-                  <li class="">
-                    <strong>Floors</strong>:  <span class="float-right">{{post.info_floors}}</span>
-                </li>
-                  <li class="">
-                    <strong>Units</strong>:  <span class="float-right">{{post.info_units}}</span>
-                </li>
-                  <li class="">
-                    <strong>Address</strong>:  <span class="float-right">{{post.info_address}}</span>
-                </li>
-                  <li class="">
-                    <strong>Neighborhood</strong>:  <span class="float-right">{{post.info_neighborhood}}</span>
-                </li>
-								
-			</ul>
-			<div class="col-lg-6 col-12 mb-2">
-				<div id="map"></div>
-			</div>
-		</div>
-		<div class="row">
-			
-		</div>
-	</div> 
-	{# <%include ../partials/form %> #}
+        var url =
+          "https://nominatim.openstreetmap.org/search?format=json&limit=5&q=" +
+          `${address}`;
+
+        console.log(url);
+
+        fetch(url)
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            var map = L.map("map").setView([data[0].lat, data[0].lon], 13);
+
+            // add an OpenStreetMap tile layer
+            L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+              attribution:
+                '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var marker = L.marker([data[0].lat, data[0].lon]).addTo(map);
+            marker.bindPopup(address).openPopup();
+          });
+      </script>
+    </div>
+    <div class="row"></div>
+  </div>
+
+  {# <%include ../partials/form %> #}
 </section>
-  
+
 {% endblock %}
-
-
