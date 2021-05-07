@@ -17,7 +17,7 @@
 <section class="container mx-auto text-primary max-w-screen-xl single-building">
   <h1 class="py-4 text-4xl text-center">{{ post.post_title }}</h1>
 
-  <div class=" md:flex-row sm:flex-col flex single-building-card no-wrap">
+  <div class=" md:flex-row flex-col flex single-building-card no-wrap">
     <div class="md:w-5/12 sm:w-full p-6 image-container">
       <img
         class="min-w-full"
@@ -41,8 +41,8 @@
   </div>
   <div class="building-details pb-40">
     <h3 class="py-1 text-3xl text-center">Building Details</h3>
-    <div class=" px-5 py-3 flex">
-      <ul class="w-6/12 details-list px-6">
+    <div class="flex md:flex-row flex-col px-5 py-3 flex">
+      <ul class="md:w-6/12 w-full details-list px-4">
         <li class="">
           <strong>Price</strong>:
           <span class="float-right">{{ post.info_price }}</span>
@@ -64,7 +64,7 @@
           <span class="float-right">{{ post.info_neighborhood }}</span>
         </li>
       </ul>
-      <div class="w-3/6">
+      <div class="md:w-3/6 w-full mt-4">
         <div id="map"></div>
       </div>
 

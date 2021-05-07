@@ -20065,6 +20065,36 @@ iframe {
   padding: 5px 0 5px 0;
 }
 
+.bio-container .contact-container {
+  border-bottom: 2px solid #5068a9;
+}
+
+.bio-container .bio-header {
+  border-bottom: 1px solid #5068a9;
+  align-items: baseline;
+}
+
+.bio-container .bio-contact {
+  justify-content: flex-end;
+}
+
+.bio-container .headshot img {
+  max-height: 350px;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.bio-container .info-box-left p {
+  margin-bottom: 16px;
+}
+
+.bio-container .info-box-right img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
 html {
   background-color: #dfdfdf;
 }
@@ -95145,4 +95175,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.30205233.min.css.map*/
+/*# sourceMappingURL=styles.72526592.min.css.map*/

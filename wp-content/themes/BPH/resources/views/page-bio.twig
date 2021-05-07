@@ -1,86 +1,92 @@
 {% extends "base.twig" %} {% block content %}
 
-
-
-<section class="container">
-  <div>
-    <div>
-      <!-- for image -->
-    </div>
-    <div>
-      <h3>Jon Kumin</h3>
-      <p>{{ contact_info.title }}</p>
-    </div>
-    <div>
-      <div>
-        <p>{{ contact_info.phone_number }}</p>
-        <p>{{ contact_info.email }}</p>
-        <p>{{ contact_info.company_profile }}</p>
+<section class="container bio-container px-15 ">
+  <div class="md:mx-16">
+    <div class="flex md:flex-row flex-col mt-5 contact-container">
+      <div class="md:w-2/5 w-full headshot">
+        <img alt="headshot picture of jon kumin" src="{{ headshot }}" />
       </div>
-      <div>
-        <p>{{ bio_acf.company }}</p>
-        <img alt="company logo" src="{{ company_logo }}" />
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <!-- {% include "components/contact-form.twig" %} -->
-    <!-- col -->
-    <div>
-      <p>{{ bio_acf.bio }}</p>
-    </div>
-    <div>
-      <h3>Awards</h3>
-      {% for award in bio_acf.awards %}
-      <div>
-        <div>icon</div>
-        <div>
-          <div>{{ award.award_title }}</div>
-          <div>{{ award.award_description }}</div>
+      <div class="md:w-3/5 w-full bio-contact px-4 mb-5 flex flex-col">
+        <div class="bio-header flex  justify-between">
+          <h3 class="xl:text-5xl lg:text-4xl text-2xl text-medium">
+            Jon Kumin
+          </h3>
+          <p class="lg:text-xl text-sm">{{ contact_info.title }}</p>
+        </div>
+        <div class="bio-info flex pt-4">
+          <div class="w-3/6 flex flex-col info-box-left">
+            <p class="lg:text-sm">{{ contact_info.phone_number }}</p>
+            <p class="lg:text-sm">{{ contact_info.email }}</p>
+            <p class="lg:text-sm">{{ contact_info.company_profile }}</p>
+          </div>
+          <div class="w-3/6 flex flex-col info-box-right">
+            <p class="text-sm text-right mb-4">{{ bio_acf.company }}</p>
+            <img
+              alt="company logo "
+              class="mb-4 px-3"
+              src="{{ company_logo }}"
+            />
+          </div>
         </div>
       </div>
-
-      {% endfor %}
     </div>
 
     <div>
-        <div>Recent Sales</div>
-        {% for property in sold  %}
-            <div>
-                <img src="{{property.image}}">
-                <div>
-                    <div>
-                        SOLD
-                    </div>
-                    <div>
-                        ${{property.price}}
-                    </div>
-                    <div>
-                        {{property.address.street_address}}, {{property.address.units}} <br>
-                        {{property.address.city}}, {{property.address.zip_code}}<br>
-                        {{property.unit_info}}
-                    </div>
-                </div>
-            </div>
+      <!-- {% include "components/contact-form.twig" %} -->
+      <!-- col -->
+      <div>
+        <p>{{ bio_acf.bio }}</p>
+      </div>
+      <div>
+        <h3>Awards</h3>
+        {% for award in bio_acf.awards %}
+        <div>
+          <div>icon</div>
+          <div>
+            <div>{{ award.award_title }}</div>
+            <div>{{ award.award_description }}</div>
+          </div>
+        </div>
 
         {% endfor %}
-    </div>
+      </div>
 
-    <!-- testimonial col -->
-    <div>
-        {% filter shortcodes %}
-            [wpforms id="89" title="false"]
-        {% endfilter %}
       <div>
-        <h3>Testimonials</h3>
+        <div>Recent Sales</div>
+        {% for property in sold %}
         <div>
-          {% for testimonial in bio_acf.testimonials %}
+          <img src="{{ property.image }}" />
           <div>
-            <p>{{ testimonial.testimonial_text }}</p>
-            <div>{{ testimonial.name }} ({{ testimonial.neighborhood }})</div>
+            <div>
+              SOLD
+            </div>
+            <div>${{ property.price }}</div>
+            <div>
+              {{ property.address.street_address }},
+              {{ property.address.units }}
+              <br />
+              {{ property.address.city }}, {{ property.address.zip_code }}<br />
+              {{ property.unit_info }}
+            </div>
           </div>
-          {% endfor %}
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <!-- testimonial col -->
+      <div>
+        {% filter shortcodes %} [wpforms id="89" title="false"] {% endfilter %}
+        <div>
+          <h3>Testimonials</h3>
+          <div>
+            {% for testimonial in bio_acf.testimonials %}
+            <div>
+              <p>{{ testimonial.testimonial_text }}</p>
+              <div>{{ testimonial.name }} ({{ testimonial.neighborhood }})</div>
+            </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,36 @@
+.bio-container {
+  .contact-container {
+    border-bottom: 2px solid rgb(80, 104, 169);
+  }
+  .bio-header {
+    border-bottom: 1px solid $primary;
+    align-items: baseline;
+  }
+
+  .bio-contact {
+    justify-content: flex-end;
+  }
+
+  .headshot {
+    img {
+      max-height: 350px;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  .info-box-left {
+    p {
+      margin-bottom: 16px;
+    }
+  }
+
+  .info-box-right {
+    img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+}
