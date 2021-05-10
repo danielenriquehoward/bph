@@ -1,4 +1,69 @@
 .bio-container {
+  .bio-text {
+    h3 {
+      color: rgb(80, 104, 169);
+      border-bottom: 1px solid $primary;
+    }
+    p {
+      margin-bottom: 16px;
+      color: $primary;
+    }
+  }
+
+  .awards-container {
+    h3 {
+      color: $primary;
+      border-top: 2px solid rgba(162, 174, 207, 0.8);
+      border-bottom: 2px solid rgba(162, 174, 207, 0.8);
+    }
+    .award-box {
+      color: $primary;
+    }
+  }
+
+  .achievements-container {
+    border-top: 1px solid $primary;
+    color: rgb(80, 104, 169);
+    h4 {
+      text-decoration: underline;
+      text-decoration-color: $primary;
+    }
+  }
+
+  .recent-sales-container {
+    color: rgb(80, 104, 169);
+    h3 {
+      border-top: 2px solid rgba(162, 174, 207, 0.8);
+      border-bottom: 2px solid rgba(162, 174, 207, 0.8);
+    }
+    .recent-sales-card {
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.25rem;
+      background: $secondary;
+      .price {
+        border-top: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        max-height: 175px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .col-right {
+    color: rgb(80, 104, 169);
+    h3 {
+      border-bottom: 1px solid $primary;
+    }
+
+    .testimonial-container {
+      border-bottom: 1px solid $primary;
+    }
+  }
+
   .contact-container {
     border-bottom: 2px solid rgb(80, 104, 169);
   }
