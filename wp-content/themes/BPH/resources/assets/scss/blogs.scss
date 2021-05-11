@@ -1,0 +1,21 @@
+.blogs-container {
+  h2 {
+    color: $primary;
+  }
+
+  .date {
+    color: $primary;
+  }
+
+  .read-more-button {
+    color: $primary;
+
+    border-color: $primary;
+  }
+
+  .read-more-button:hover {
+    color: white;
+    background: $primary;
+    border-color: $primary;
+  }
+}

@@ -20,10 +20,24 @@ $args = array(
 
 $all_blogs= new WP_Query($args);
 
+$snipped_blogs = [];
+
+foreach($all_blogs->posts as $blurb){
+
+    $blurb_object = new stdClass();
+    $blurb_object->ID = $blurb->ID;
+    $blurb_object->slug= $blurb->post_name;
+    $blurb_object->title=$blurb->post_title;
+    $blurb_object->content =  wp_trim_words($blurb->post_content, 150);
+    $blurb_object->date_posted = date('m/d/Y', strtotime($blurb->post_date));
+
+    array_push($snipped_blogs, $blurb_object);
+     
+}
+
+$context['all_blogs'] = $snipped_blogs;
 
 
-$context['all_blogs'] = $all_blogs->posts;
 
-// dump($all_blogs->posts);
 
 Timber::render('page-blogs.twig', $context);

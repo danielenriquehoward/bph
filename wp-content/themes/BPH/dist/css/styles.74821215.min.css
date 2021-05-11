@@ -20164,6 +20164,25 @@ iframe {
   object-fit: contain;
 }
 
+.blogs-container h2 {
+  color: #5068a9;
+}
+
+.blogs-container .date {
+  color: #5068a9;
+}
+
+.blogs-container .read-more-button {
+  color: #5068a9;
+  border-color: #5068a9;
+}
+
+.blogs-container .read-more-button:hover {
+  color: white;
+  background: #5068a9;
+  border-color: #5068a9;
+}
+
 html {
   background-color: #dfdfdf;
 }
@@ -95244,4 +95263,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.16589250.min.css.map*/
+/*# sourceMappingURL=styles.74821215.min.css.map*/
