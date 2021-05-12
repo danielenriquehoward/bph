@@ -28,7 +28,7 @@ foreach($all_blogs->posts as $blurb){
     $blurb_object->ID = $blurb->ID;
     $blurb_object->slug= $blurb->post_name;
     $blurb_object->title=$blurb->post_title;
-    $blurb_object->content =  wp_trim_words($blurb->post_content, 150);
+    $blurb_object->content =  strval(wp_trim_words($blurb->post_content, 75));
     $blurb_object->date_posted = date('m/d/Y', strtotime($blurb->post_date));
 
     array_push($snipped_blogs, $blurb_object);

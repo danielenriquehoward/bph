@@ -19,3 +19,49 @@
     border-color: $primary;
   }
 }
+
+.single-article-container {
+  h1 {
+    color: $primary;
+  }
+
+  h2 {
+    color: $primary;
+    font-size: 28px;
+  }
+
+  .date {
+    color: $primary;
+  }
+
+  hr {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  .wp-block-table {
+    table {
+      width: 80%;
+      text-align: center;
+      margin: 25px auto 50px auto;
+      border: 1px solid $primary;
+      border-collapse: collapse;
+
+      td,
+      th {
+        border: 1px solid $primary;
+        padding: 1px;
+      }
+
+      tr:nth-child(even) {
+        background: rgb(245, 245, 245);
+      }
+      tr:nth-child(odd) {
+        background: #fff;
+      }
+    }
+  }
+}
