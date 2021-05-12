@@ -66,6 +66,10 @@
 
   .contact-container {
     border-bottom: 2px solid rgb(80, 104, 169);
+    color: $primary;
+
+    .bio-info {
+    }
   }
   .bio-header {
     border-bottom: 1px solid $primary;
@@ -77,11 +81,13 @@
   }
 
   .headshot {
+    display: flex;
+    justify-content: center;
     img {
-      max-height: 350px;
+      // max-height: 350px;
       height: 100%;
       width: auto;
-      object-fit: contain;
+      // object-fit: contain;
     }
   }
 

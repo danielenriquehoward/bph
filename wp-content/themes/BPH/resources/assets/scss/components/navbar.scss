@@ -1,5 +1,5 @@
 .nav {
-  height: 18vw;
+  // height: 12vw;
 
   .nav-container {
     color: $primary;
@@ -9,8 +9,14 @@
     }
 
     li a {
-      display: inline-block;
+      display: block;
       padding: 8px;
+    }
+
+    @media only screen and (max-width: 732px) {
+      .home-link {
+        display: none;
+      }
     }
   }
 }

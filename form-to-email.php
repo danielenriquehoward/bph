@@ -1,6 +1,6 @@
 <?php
 
-    echo "hi";
+   
 
     if(isset($_POST['submit_btn'])){ //check if form was submitted
 

@@ -20136,6 +20136,7 @@ iframe {
 
 .bio-container .contact-container {
   border-bottom: 2px solid #5068a9;
+  color: #5068a9;
 }
 
 .bio-container .bio-header {
@@ -20147,11 +20148,14 @@ iframe {
   justify-content: flex-end;
 }
 
+.bio-container .headshot {
+  display: flex;
+  justify-content: center;
+}
+
 .bio-container .headshot img {
-  max-height: 350px;
   height: 100%;
   width: auto;
-  object-fit: contain;
 }
 
 .bio-container .info-box-left p {
@@ -20190,6 +20194,9 @@ iframe {
 .single-article-container h2 {
   color: #5068a9;
   font-size: 28px;
+  margin-bottom: 25px;
+  padding: 20px 0 5px 0;
+  border-bottom: 1px solid #5068a9;
 }
 
 .single-article-container .date {
@@ -20202,6 +20209,16 @@ iframe {
 
 .single-article-container p {
   margin-bottom: 16px;
+}
+
+.single-article-container figure {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 50px 0;
+}
+
+.single-article-container figure img {
+  max-width: 90%;
 }
 
 .single-article-container .wp-block-table table {
@@ -20226,10 +20243,6 @@ iframe {
   background: #fff;
 }
 
-.nav {
-  height: 18vw;
-}
-
 .nav .nav-container {
   color: #5068a9;
 }
@@ -20239,8 +20252,14 @@ iframe {
 }
 
 .nav .nav-container li a {
-  display: inline-block;
+  display: block;
   padding: 8px;
+}
+
+@media only screen and (max-width: 732px) {
+  .nav .nav-container .home-link {
+    display: none;
+  }
 }
 
 .nav-container {
@@ -20249,6 +20268,47 @@ iframe {
 
 html {
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#wpforms-form-89 .wpforms-field-container div {
+  margin: 16px 0;
+}
+
+#wpforms-form-89 .wpforms-field-container label {
+  display: none;
+}
+
+#wpforms-form-89 .wpforms-field-container input,
+#wpforms-form-89 .wpforms-field-container textarea {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #5068a9;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#wpforms-form-89 .wpforms-submit-container button {
+  width: 100%;
+  background-color: white;
+  border: 1px #5068a9 solid;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  float: right;
+  transition: 1s;
 }
 
 html {
@@ -95331,4 +95391,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.76557626.min.css.map*/
+/*# sourceMappingURL=styles.63983876.min.css.map*/

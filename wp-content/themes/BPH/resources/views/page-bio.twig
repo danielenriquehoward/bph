@@ -1,10 +1,14 @@
 {% extends "base.twig" %} {% block content %}
 
-<section class="container bio-container px-15 ">
-  <div class="md:mx-16">
+<section class="container bio-container lg:px-20 md:px-15 px-10 ">
+  <div class="">
     <div class="flex md:flex-row flex-col mt-5 mb-5 contact-container">
       <div class="md:w-2/5 w-full headshot">
-        <img alt="headshot picture of jon kumin" src="{{ headshot }}" />
+        <img
+          class=""
+          alt="headshot picture of jon kumin"
+          src="{{ headshot }}"
+        />
       </div>
       <div class="md:w-3/5 w-full bio-contact px-4 mb-5 flex flex-col">
         <div class="bio-header flex  justify-between">
@@ -15,12 +19,16 @@
         </div>
         <div class="bio-info flex pt-4">
           <div class="w-3/6 flex flex-col info-box-left">
-            <p class="lg:text-sm">{{ contact_info.phone_number }}</p>
-            <p class="lg:text-sm">{{ contact_info.email }}</p>
-            <p class="lg:text-sm">{{ contact_info.company_profile }}</p>
+            <p class="lg:text-xl text-base">{{ contact_info.phone_number }}</p>
+            <p class="lg:text-xl text-base">{{ contact_info.email }}</p>
+            <p class="lg:text-xl text-base">
+              {{ contact_info.company_profile }}
+            </p>
           </div>
           <div class="w-3/6 flex flex-col info-box-right">
-            <p class="text-sm text-right mb-4">{{ bio_acf.company }}</p>
+            <p class=" xl:text-xl md:text-sm text-xs text-base text-right mb-4">
+              {{ bio_acf.company }}
+            </p>
             <img
               alt="company logo "
               class="mb-4 px-3"
@@ -97,7 +105,11 @@
       </div>
       <div class="col-right px-4 w-full lg:w-4/12">
         <div class="form-container">
-          <!-- {% include "components/contact-form.twig" %} -->
+          <p>
+            For more information on all available listings, or future listings
+            coming to the market, please inquire here:
+          </p>
+
           {% filter shortcodes %} [wpforms id="89" title="false"] {% endfilter
           %}
         </div>

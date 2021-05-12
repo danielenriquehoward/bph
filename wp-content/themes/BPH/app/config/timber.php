@@ -54,7 +54,7 @@ function add_to_context($context)
     $context['messages'] = get_template_messages();
 
     // Logo
-    $context['logo'] = images_path('logo.svg');
+    $context['logo'] = images_path('logo.png');
 
     // Favicon
     $context['favicon'] = images_path('favicon.png');

@@ -28,6 +28,9 @@
   h2 {
     color: $primary;
     font-size: 28px;
+    margin-bottom: 25px;
+    padding: 20px 0 5px 0;
+    border-bottom: 1px solid $primary;
   }
 
   .date {
@@ -40,6 +43,16 @@
 
   p {
     margin-bottom: 16px;
+  }
+
+  figure {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 50px 0;
+
+    img {
+      max-width: 90%;
+    }
   }
 
   .wp-block-table {

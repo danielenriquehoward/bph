@@ -1,16 +1,16 @@
-<nav class=" flex px-4 items-center nav" >
-  <!-- {# {% include 'components/navbar/_navbar-brand.twig' %}
-	<div class="ml-auto flex items-center">
-		{% include 'components/navbar/_navbar-menu.twig' %}
-	</div> #} -->
+<nav class=" flex pt-4  md:px-4 px-2 items-center nav">
+  <!-- {% include 'components/navbar/_navbar-brand.twig' %} -->
+  <!-- <div class="ml-auto flex items-center">
+    {% include 'components/navbar/_navbar-menu.twig' %}
+  </div> -->
 
-  <a href="/">
-    <img src="" />
+  <a class="md:mr-5 md:w-32 w-10 h-full max-h-32" href="/">
+    <img class="   " src="{{ logo }}" />
   </a>
 
   <div class="nav-container uppercase">
-    <ul class="flex flex-row text-lg ">
-      <li class="hidden"><a href="/" class="">Home</a></li>
+    <ul class="flex flex-row md:text-lg text-sm">
+      <li class="home-link"><a href="/" class="">Home</a></li>
       <li class=""><a href="/buildings" class="">Luxury Properties</a></li>
       <li class=""><a href="/blogs" class="">Market Insights</a></li>
       <li class=""><a href="/bio" class="">Agent Bio</a></li>
