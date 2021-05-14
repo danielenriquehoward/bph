@@ -1,12 +1,10 @@
 {
-    "/js/scripts.31211819.min.js": "/js/scripts.31211819.min.js",
-    "/css/styles.63983876.min.css": "/css/styles.63983876.min.css",
-    "/css/login.99382688.min.css": "/css/login.99382688.min.css",
-    "/css/admin.46911071.min.css": "/css/admin.46911071.min.css",
-    "/js/scripts.31211819.min.js.map": "/js/scripts.31211819.min.js.map",
-    "/css/styles.63983876.min.css.map": "/css/styles.63983876.min.css.map",
-    "/css/login.99382688.min.css.map": "/css/login.99382688.min.css.map",
-    "/css/admin.46911071.min.css.map": "/css/admin.46911071.min.css.map",
+    "/js/scripts.18735997.min.js": "/js/scripts.18735997.min.js",
+    "/css/login.24639783.min.css": "/css/login.24639783.min.css",
+    "/css/admin.51859902.min.css": "/css/admin.51859902.min.css",
+    "/js/scripts.18735997.min.js.map": "/js/scripts.18735997.min.js.map",
+    "/css/login.24639783.min.css.map": "/css/login.24639783.min.css.map",
+    "/css/admin.51859902.min.css.map": "/css/admin.51859902.min.css.map",
     "/fonts/Calluna-It-webfont.woff": "/fonts/Calluna-It-webfont.woff",
     "/fonts/Calluna-It-webfont.woff2": "/fonts/Calluna-It-webfont.woff2",
     "/fonts/Calluna-Regular-webfont.woff": "/fonts/Calluna-Regular-webfont.woff",
@@ -19,5 +17,7 @@
     "/fonts/icomoon.eot": "/fonts/icomoon.eot",
     "/fonts/icomoon.svg": "/fonts/icomoon.svg",
     "/fonts/icomoon.ttf": "/fonts/icomoon.ttf",
-    "/fonts/icomoon.woff": "/fonts/icomoon.woff"
+    "/fonts/icomoon.woff": "/fonts/icomoon.woff",
+    "/css/styles.49584402.min.css": "/css/styles.49584402.min.css",
+    "/css/styles.49584402.min.css.map": "/css/styles.49584402.min.css.map"
 }

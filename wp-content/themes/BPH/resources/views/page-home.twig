@@ -1,66 +1,92 @@
-<section>
-  <div>
-    <div>
-      logo
-    </div>
-    <div>
-      <img /> bph logo
-      <img src="{{ company_logo }}" />
-    </div>
-    <div>
-      <img src="{{ featured_image }}" />
-    </div>
-    <div>
-      {{ post.post_content }}
-    </div>
-    <div>
-      Jon Kumin <br />
-      <ul>
-        <li>{{ contact_info.title }}</li>
-        <li>{{ contact_info.phone_number }}</li>
-        <li>{{ contact_info.email }}</li>
-        <li>{{ contact_info.company_profile }}</li>
-      </ul>
-    </div>
-    <div>
-      Affiliations
-      <ul>
-        {% for affiliation in affiliations %}
+{% extends "base.twig" %} {% block content %}
 
-        <li>{{ affiliation.affiliation_name }}</li>
-
-        {% endfor %}
-      </ul>
-    </div>
-    <div>
-      <h2>Luxury Properties</h2>
-    </div>
-    <div>
-      {% for building in buildings %}
-      <a href="{{ building.post_name }}">{{ building.post_title }}</a>
-      {% endfor %}
-    </div>
-  </div>
-
-  <!--- featured properties--->
-
-  <div>
-    <div>
-      <div>
-        <a href="/buildings">Browse Featured Properties</a>
+<section class="md:px-4 px-2">
+  <div class="home-container flex xl:flex-row flex-col">
+    <div class="col-left w-full xl:w-7/12 px-2 md:px-4">
+      <div class="w-full flex h-40 px-4 logos-container">
+        <img class="w-3/6 px-4 h-5/6 object-cover" src="{{ logo2 }}" />
+        <img class="w-3/6 object-contain p-4 mr-4" src="{{ company_logo }}" />
       </div>
-      <div>
-        {% for property in featured_properties %}
-        <div>
-          <a href="{{ property.slug }}">
-            <div>
-              <img alt="{{ property.title }}" src="{{ property.image }}" />
-              <h2>{{ property.title }}</h2>
-            </div>
-          </a>
+      <div class="w-full px-4 pt-4 flex justify-center">
+        <img
+          class="object-contain  featured-image"
+          src="{{ featured_image }}"
+        />
+      </div>
+      <div class="home-page-content py-5">
+        {{ post.post_content }}
+      </div>
+      <div class="flex md:flex-row flex-col  w-full contact-affiliations">
+        <div class="md:w-3/6 w-full md:text-left text-center md:pl-5">
+          <b class="">Jon Kumin</b> <br />
+          <ul>
+            <li>{{ contact_info.title }}</li>
+            <li>{{ contact_info.phone_number }}</li>
+            <li>{{ contact_info.email }}</li>
+            <li>{{ contact_info.company_profile }}</li>
+          </ul>
         </div>
+        <div
+          class="md:w-3/6 md:pt-0 pt-4 w-full md:text-left text-center md:pl-4"
+        >
+          <b class="underline-primary">Affiliations</b>
+          <ul>
+            {% for affiliation in affiliations %}
+
+            <li>{{ affiliation.affiliation_name }}</li>
+
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="w-full my-12 p-7percent text-3xl text-center">
+        <h2 class="top-bottom-line-primary py-3">Luxury Properties</h2>
+      </div>
+      <div class="p-7percent flex pb-5 justify-center flex-wrap">
+        {% for building in buildings %}
+        <a class="underline m-3" href="{{ building.post_name }}">{{
+          building.post_title
+        }}</a>
         {% endfor %}
+      </div>
+    </div>
+
+    <div class="col-right w-full xl:w-5/12 px-2 md:px-4">
+      <div>
+        <div class="py-8 text-center w-full" id="browse-featured">
+          <a href="/buildings">
+            <i class="fas fa-search  "></i>Browse Featured Properties</a
+          >
+        </div>
+        <div class="w-full grid grid-cols-2 gap-4">
+          {% for property in featured_properties %}
+          <div class="hidden-name">
+            <a href="{{ property.slug }}">
+              <div>
+                <img
+                  class="w-full h-40 w-full object-cover rounded-md"
+                  alt="{{ property.title }}"
+                  src="{{ property.image }}"
+                />
+
+                <h2 class=" text-center">{{ property.title }}</h2>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="form-container mt-10">
+        <p>
+          For more information on all available listings, or future listings
+          coming to the market, please inquire here:
+        </p>
+
+        {% filter shortcodes %} [wpforms id="89" title="false"] {% endfilter %}
       </div>
     </div>
   </div>
 </section>
+
+{% endblock %}

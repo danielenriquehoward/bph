@@ -52,5 +52,5 @@ $context['buildings'] = $buildings->posts;
 $context['featured_image'] = wp_get_attachment_image_src($post->featured_image, $default)[0];
 $context['company_logo'] = wp_get_attachment_image_src(get_field('company_logo', 'option'), $default)[0];
 
-dump($context);
+
 Timber::render( 'page-home.twig' , $context );

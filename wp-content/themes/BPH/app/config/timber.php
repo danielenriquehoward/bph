@@ -56,6 +56,10 @@ function add_to_context($context)
     // Logo
     $context['logo'] = images_path('logo.png');
 
+    // logo2
+    $context['logo2'] = images_path('logo2.png');
+
+
     // Favicon
     $context['favicon'] = images_path('favicon.png');
 

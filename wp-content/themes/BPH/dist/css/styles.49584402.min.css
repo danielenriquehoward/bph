@@ -20274,6 +20274,91 @@ body {
   min-height: 100vh;
 }
 
+.home-container {
+  color: #5068a9;
+}
+
+.home-container .col-right {
+  color: #5068a9;
+}
+
+.home-container .col-right #browse-featured a {
+  font-size: 25px;
+}
+
+.home-container .col-right .hidden-name {
+  position: relative;
+}
+
+.home-container .col-right .hidden-name h2 {
+  font-weight: 500;
+  font-size: 24px;
+  opacity: 1;
+  color: white;
+  text-shadow: 0 0 5px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  opacity: 0;
+}
+
+.home-container .col-right .hidden-name:hover img {
+  opacity: 0.5;
+}
+
+.home-container .col-right .hidden-name:hover h2 {
+  opacity: 1;
+}
+
+.home-container .col-right i {
+  padding-right: 1vw;
+  font-size: 25px;
+}
+
+.home-container .p-7percent {
+  padding: 0 7% 0 7%;
+}
+
+.home-container .underline-primary {
+  border-bottom: 1px solid #5068a9;
+}
+
+.home-container .top-bottom-line-primary {
+  border-bottom: 1px solid #5068a9;
+  border-top: 1px solid #5068a9;
+}
+
+.home-container .logos-container {
+  border-bottom: 4px solid #5068a9;
+}
+
+.home-container .featured-image {
+  height: 250px;
+}
+
+.home-container .home-page-content {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.home-container .home-page-content p {
+  margin: 15px 0 15px 0;
+}
+
+.home-container .home-page-content ul {
+  padding-left: 40px;
+}
+
+.home-container .home-page-content ul li {
+  padding: 0 50px 15px 0;
+}
+
+.home-container .contact-affiliations {
+  padding: 0 7% 0 7%;
+}
+
 #wpforms-form-89 .wpforms-field-container div {
   margin: 16px 0;
 }
@@ -95391,4 +95476,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.63983876.min.css.map*/
+/*# sourceMappingURL=styles.49584402.min.css.map*/
