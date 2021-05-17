@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_60660271e9162",
-            "label": "image",
-            "name": "image",
-            "type": "image",
+            "label": "Gallery",
+            "name": "gallery",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,9 +15,12 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "array",
             "preview_size": "medium",
+            "insert": "append",
             "library": "all",
+            "min": "",
+            "max": "",
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -28,7 +31,7 @@
         },
         {
             "key": "field_60648f33d27a4",
-            "label": "info",
+            "label": "Info",
             "name": "info",
             "type": "group",
             "instructions": "",
@@ -43,7 +46,7 @@
             "sub_fields": [
                 {
                     "key": "field_60648f48d27a5",
-                    "label": "address",
+                    "label": "Address",
                     "name": "address",
                     "type": "text",
                     "instructions": "",
@@ -62,7 +65,7 @@
                 },
                 {
                     "key": "field_60648f54d27a6",
-                    "label": "price",
+                    "label": "Price",
                     "name": "price",
                     "type": "text",
                     "instructions": "",
@@ -81,7 +84,7 @@
                 },
                 {
                     "key": "field_60648f5cd27a7",
-                    "label": "floors",
+                    "label": "Floors",
                     "name": "floors",
                     "type": "number",
                     "instructions": "",
@@ -102,7 +105,7 @@
                 },
                 {
                     "key": "field_60648f6fd27a8",
-                    "label": "units",
+                    "label": "Units",
                     "name": "units",
                     "type": "number",
                     "instructions": "",
@@ -123,7 +126,7 @@
                 },
                 {
                     "key": "field_60648f79d27a9",
-                    "label": "neighborhood",
+                    "label": "Neighborhood",
                     "name": "neighborhood",
                     "type": "text",
                     "instructions": "",
@@ -144,7 +147,7 @@
         },
         {
             "key": "field_609050d389031",
-            "label": "status",
+            "label": "Status",
             "name": "status",
             "type": "radio",
             "instructions": "",
@@ -184,5 +187,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620071507
+    "modified": 1621270245
 }
