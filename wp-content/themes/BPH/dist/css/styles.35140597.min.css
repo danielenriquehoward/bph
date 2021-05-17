@@ -20359,6 +20359,25 @@ body {
   padding: 0 7% 0 7%;
 }
 
+@media only screen and (max-width: 700px) {
+  .home-container .home-page-content {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .home-container .home-page-content p {
+    margin: 15px 0 15px 0;
+  }
+
+  .home-container .home-page-content ul {
+    padding-left: 20px;
+  }
+
+  .home-container .home-page-content ul li {
+    padding: 0 25px 15px 0;
+  }
+}
+
 #wpforms-form-89 .wpforms-field-container div {
   margin: 16px 0;
 }
@@ -95476,4 +95495,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.49584402.min.css.map*/
+/*# sourceMappingURL=styles.35140597.min.css.map*/

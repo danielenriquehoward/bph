@@ -34,7 +34,7 @@
 
       <a
         class="float-right mt-4 mr-5 p-2 text-lg request-viewing-button"
-        href="/contacts/new"
+        href="/bio"
         >Request Viewing/Info</a
       >
     </div>
@@ -99,7 +99,17 @@
           });
       </script>
     </div>
-    <div class="row"></div>
+    <h3 class="py-1 mb-4 text-3xl text-center">More Information</h3>
+    <div class="flex justify-center">
+      <div class="form-container max-w-2xl ">
+        <p>
+          For more information on all available listings, or future listings
+          coming to the market, please inquire here:
+        </p>
+
+        {% filter shortcodes %} [wpforms id="89" title="false"] {% endfilter %}
+      </div>
+    </div>
   </div>
 
   {# <%include ../partials/form %> #}
