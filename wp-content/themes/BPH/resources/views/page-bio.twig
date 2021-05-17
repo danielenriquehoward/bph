@@ -26,7 +26,7 @@
             </p>
           </div>
           <div class="w-3/6 flex flex-col info-box-right">
-            <p class=" xl:text-xl md:text-sm text-xs text-base text-right mb-4">
+            <p class=" xl:text-xl md:text-sm text-xs  text-right mb-4">
               {{ bio_acf.company }}
             </p>
             <img
@@ -68,7 +68,7 @@
 
             <ul>
               {% for company_achievement in achievement.company_achievements %}
-              <li>{{ company_achievement.achievement }}</li>
+              <li class="mb-2">{{ company_achievement.achievement }}</li>
 
               {% endfor %}
             </ul>
