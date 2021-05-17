@@ -30,8 +30,8 @@ function create_post_types(){
   'has_archive' => false,
   'query_var' => false,
   'hierarchical' => false,
-  'rewrite' => array( 'slug' => '/buildings', 'with_front'=> false )
-  
+  'rewrite' => array( 'slug' => '/buildings', 'with_front'=> false ),
+  'supports' => array('editor','title','thumbnail')
   )
 
 
