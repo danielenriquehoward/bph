@@ -63,7 +63,7 @@ $context['buildings'] = $buildings_array;
 
 
 
-$id= $bio->post->ID;
+$id= $post->ID;
 
 
 $context['sold'] = $sold_array;
@@ -74,6 +74,6 @@ $context['company_logo'] = wp_get_attachment_image_src(get_field('company_logo',
 $context['headshot'] = wp_get_attachment_image_src(get_fields($id)['headshot'], $default)[0];
 $context['bio_text'] = wpautop(get_field('bio', $id));
 
-
+dump($context);
 
 Timber::render('page-bio.twig', $context);

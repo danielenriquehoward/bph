@@ -35,7 +35,7 @@ foreach($all_buildings->posts as $building){
     $building_object->link = get_permalink($building->ID);
     $building_object->title = $building->post_title;
     // $building_object->description = $building->post_content;
-    $building_object->image_url = get_post_meta($building->ID, 'image_url')[0];
+    $building_object->featured_image = get_the_post_thumbnail_url($building->ID, 'full');
     $building_object->address = get_post_meta($building->ID, 'info_address')[0];
     // $building_object->price = get_post_meta($building->ID, 'info_price')[0];
     // $building_object->floors = get_post_meta($building->ID, 'info_floors')[0];
@@ -56,7 +56,7 @@ foreach($all_buildings->posts as $building){
 $context['buildings'] = $buildings_array;
 
 
-
+dump($context);
 
 
 if (post_password_required($post->ID)) {
