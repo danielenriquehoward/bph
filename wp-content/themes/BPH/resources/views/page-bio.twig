@@ -1,6 +1,6 @@
 {% extends "base.twig" %} {% block content %}
 
-<section class="container bio-container lg:px-20 md:px-15 px-10 ">
+<section class="container contact-container bio-container lg:px-20 md:px-15 px-10 ">
   <div class="">
     <div class="flex md:flex-row flex-col mt-5 mb-5 contact-container">
       <div class="md:w-2/5 w-full headshot">
@@ -17,12 +17,25 @@
           </h3>
           <p class="lg:text-xl text-sm">{{ contact_info.title }}</p>
         </div>
-        <div class="bio-info flex pt-4">
+        <div class="bio-info bio-info-box flex pt-4">
           <div class="w-3/6 flex flex-col info-box-left">
-            <p class="lg:text-xl text-base">{{ contact_info.phone_number }}</p>
-            <p class="lg:text-xl text-base">{{ contact_info.email }}</p>
             <p class="lg:text-xl text-base">
-              {{ contact_info.company_profile }}
+              <a href="tel:{{contact_info.phone_number}}">
+                <i class="fas fa-phone-square"></i>
+                {{ contact_info.phone_number }}
+              </a>
+            </p>
+            <p class="lg:text-xl text-base">
+              <a href="mailto:{{ contact_info.email }}">
+                <i class="far fa-envelope"></i>
+                {{ contact_info.email }}
+              </a>
+            </p>
+            <p class="lg:text-xl text-base">
+              <a href="http://www.{{ contact_info.company_profile }}">
+                <i class="fas fa-passport"></i>
+                {{ contact_info.company_profile }}
+              </a>
             </p>
           </div>
           <div class="w-3/6 flex flex-col info-box-right">
