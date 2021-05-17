@@ -13,10 +13,6 @@ $context['cancel_link'] = get_cancel_comment_reply_link(__('Cancel reply', 'tail
 $args = array(
            'numberposts' => -1,
            'post_type' => 'buildings',
-           
-           
-           
-            
        );
 
 $all_buildings= new WP_Query($args);
@@ -27,7 +23,7 @@ $buildings_array = [];
 
 
 foreach($all_buildings->posts as $building){
-    
+
     $building_object = new stdClass();
 
     $building_object->id = $building->ID;
@@ -42,21 +38,13 @@ foreach($all_buildings->posts as $building){
     // $building_object->units = get_post_meta($building->ID, 'info_units')[0];
     $building_object->neighborhood = get_post_meta($building->ID, 'info_neighborhood')[0];
 
-
-    
-    
     array_push($buildings_array, $building_object);
-    //  array_push($buildings_array, get_post_meta($building->ID));
-    
 
 }
 
 
 
 $context['buildings'] = $buildings_array;
-
-
-dump($context);
 
 
 if (post_password_required($post->ID)) {
