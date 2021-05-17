@@ -1,5 +1,6 @@
 <?php
 
+  // TODO: See what is useful.
   $context['newslettertitle'] = get_field('newsletter_title', 'option');
   $context['inputplaceholder'] = get_field('input_placeholder', 'option');
   $context['disclaimer'] = get_field('disclaimer', 'option');
