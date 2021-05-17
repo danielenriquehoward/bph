@@ -9,6 +9,9 @@ $building = new TimberPost();
 
 
 $context['post'] = $post;
+$context['featured_image'] = get_the_post_thumbnail_url($post->ID, 'full');
+
+// dump($context);
 
 // $url = "https://nominatim.openstreetmap.org/search?format=json&limit=5&q={$post->info_address}";
 
