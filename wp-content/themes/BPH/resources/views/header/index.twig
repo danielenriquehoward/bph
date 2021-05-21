@@ -14,7 +14,8 @@
   <body class="{{ body_class }}">
     <div class="pageloader is-active"></div>
 
-    {% if not in_production %}
+    {# TODO: Fix This #}
+    {% if false %}
       <div class="current-template-file-name text-center py-12">
         {{ current_template_file }}
       </div>
@@ -24,9 +25,6 @@
 
       <header>
 
-        
-          {% include "components/navbar/index.twig" %}
-          
-        
+        {% include "components/navbar/index.twig" %}
 
       </header>
