@@ -88,6 +88,37 @@ function custom_menu_page_removing() {
 }
 add_action( 'admin_menu', 'custom_menu_page_removing' );
 
+
+
+function add_custom_email( $entry, $form_data){
+
+  
+
+  error_log(print_r("hello this is function", true));
+  error_log(print_r($entry, true));
+
+  $new_post = array(
+
+      
+
+    'post_title' => "{$entry['fields']['7']} {$entry['fields']['9']}",
+    'post_content' => "From: {$entry['fields']['1']} {$entry['fields']['2']}  Message:{$entry['fields']['8']}  Phone:{$entry['fields']['6']}",
+    'post_status' => 'publish',
+		'post_date' => date('Y-m-d H:i:s'),
+    'post_type' => 'contacts',
+    'post_category' => array(0),
+    
+
+
+  );
+
+  $post_id = wp_insert_post($new_post);
+  
+
+};
+
+add_action('wpforms_process_before', 'add_custom_email', 10, 2 );
+
 /* Remove comments system */
 // Disable support for comments and trackbacks in post types
 function disable_comments_post_types_support() {

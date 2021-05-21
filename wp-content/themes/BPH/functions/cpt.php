@@ -37,6 +37,41 @@ function create_post_types(){
 
 );
 
+  register_post_type('contacts',
+
+    array('labels' => array(
+
+
+      'name' => _x( 'Contacts', 'taxonomy general name', 'textdomain' ),
+      'singular_name' => _x( 'Contacts', 'taxonomy singular name', 'textdomain' ),
+      'search_items'               => __( 'Search Contacts', 'textdomain' ),
+      'popular_items'              => __( 'Popular Contacts', 'textdomain' ),
+      'all_items'                  => __( 'All Contacts', 'textdomain' ),
+      'parent_item'                => null,
+      'parent_item_colon'          => null,
+      'edit_item'                  => __( 'Edit Building', 'textdomain' ),
+      'update_item'                => __( 'Update Building', 'textdomain' ),
+      'add_new_item'               => __( 'Add New Building', 'textdomain' ),
+      'new_item_name'              => __( 'New Building Name', 'textdomain' ),
+      'separate_items_with_commas' => __( 'Separate Contacts with commas', 'textdomain' ),
+      'add_or_remove_items'        => __( 'Add or remove Contacts', 'textdomain' ),
+      'choose_from_most_used'      => __( 'Choose from the most used Contacts', 'textdomain' ),
+      'not_found'                  => __( 'No Contacts found.', 'textdomain' ),
+      'menu_name'                  => __( 'Contacts', 'textdomain' ),
+
+
+    ),
+    'public' => true,
+    'has_archive' => false,
+    'query_var' => false,
+    'hierarchical' => false,
+    'rewrite' => array( 'slug' => '/Contacts', 'with_front'=> false ),
+    'supports' => array('editor','title','thumbnail')
+    )
+
+
+  );
+
   register_post_type(
     'articles',
     array(
@@ -65,7 +100,7 @@ function create_post_types(){
       'taxonomies' => array('post_tag', 'what_to_do', 'category'),
       'menu_icon' => 'dashicons-media-document',
       'show_in_rest' => true,
-      'supports' => array('editor','title','excerpt','thumbnail'),
+      'supports' => array('title'),
       'rewrite' => array( 'slug' => '/blogs', 'with_front'=> false )
     )
   );
