@@ -51,4 +51,5 @@ $context['featured_image'] = wp_get_attachment_image_src($post->featured_image, 
 $context['company_logo'] = wp_get_attachment_image_src(get_field('company_logo', 'option'), 'full')[0];
 
 
+
 Timber::render( 'page-home.twig' , $context );
