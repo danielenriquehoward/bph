@@ -23,7 +23,7 @@ foreach($featured_properties as $property){
 
     $property_object->slug = $property->post_name;
     $property_object->title = $property->post_title;
-    $property_object->image = get_field('image', $property->ID)[0]['url'];
+    $property_object->image = get_the_post_thumbnail_url($property->ID, 'full');
 
 
 
