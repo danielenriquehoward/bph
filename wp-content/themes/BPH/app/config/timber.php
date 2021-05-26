@@ -69,7 +69,7 @@ function add_to_context($context)
     // Extend TimberSite object
     $context['site'] = new TailbaseSite();
 
-    $context['in_production'] = bc_env('MODE', 'production') === 'production';
+    // $context['in_production'] = bc_env('MODE', 'production') === 'production';
 
     return $context;
 }
