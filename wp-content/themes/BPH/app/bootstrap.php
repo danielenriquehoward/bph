@@ -16,7 +16,7 @@ $dotenv->load();
 require_once __DIR__ . '/../app/config/autoload.php';
 
 // Init Sessions
-Session::init();
+// Session::init();
 
 /**
  * Loads the theme's translated strings.
