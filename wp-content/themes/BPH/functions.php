@@ -92,18 +92,11 @@ add_action( 'admin_menu', 'custom_menu_page_removing' );
 
 function add_custom_email( $entry, $form_data){
 
-  
-
-  error_log(print_r("hello this is function", true));
-  error_log(print_r($entry, true));
-
   $entry_page = get_post_field( 'post_title' );
 
   $entry['fields']->page_origin = $entry_page;
 
   $new_post = array(
-
-      
 
     'post_title' => "{$entry['fields']['7']} {$entry['fields']['9']}",
     'post_content' => "From: {$entry['fields']['1']} {$entry['fields']['2']} \n Message: {$entry['fields']['8']} \n Phone: {$entry['fields']['6']} \n Page: {$entry_page}  ",
@@ -111,13 +104,10 @@ function add_custom_email( $entry, $form_data){
 		'post_date' => date('Y-m-d H:i:s'),
     'post_type' => 'contacts',
     'post_category' => array(0),
-    
-
 
   );
 
   $post_id = wp_insert_post($new_post);
-  
 
 };
 
