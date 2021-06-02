@@ -61,12 +61,13 @@ function create_post_types(){
 
 
     ),
-    'public' => true,
+    'public' => false,
+    'publicly_queryable' => true,
+    'show_ui' => true,
     'has_archive' => false,
-    'query_var' => false,
     'hierarchical' => false,
     'rewrite' => array( 'slug' => '/Contacts', 'with_front'=> false ),
-    'supports' => array('editor','title','thumbnail')
+    'supports' => array('editor','title')
     )
 
 
