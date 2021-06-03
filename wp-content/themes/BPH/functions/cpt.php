@@ -101,7 +101,7 @@ function create_post_types(){
       'taxonomies' => array('post_tag', 'what_to_do', 'category'),
       'menu_icon' => 'dashicons-media-document',
       'show_in_rest' => true,
-      'supports' => array('title'),
+      'supports' => array('editor','title','thumbnail'),
       'rewrite' => array( 'slug' => '/blogs', 'with_front'=> false )
     )
   );
