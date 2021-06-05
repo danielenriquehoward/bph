@@ -10,7 +10,7 @@
         {# Second level menu #}
         <ul class="navbar-dropdown is-hover second-level">
           {% for child in item.get_children %}
-            <li class="">
+            <li class="nav-item">
               <a class="navbar-item {{ child.class }} {{ child.get_children ? 'has-children' }}" href="{{ child.link }}">
                 {{ child.title }}
               </a>

@@ -26,14 +26,14 @@
       />
     </div>
     <div class="md:w-7/12 sm:w-full px-4 py-2 ">
-      <p
-        class="px-5 pt-5 lg:text-xl md:text-l sm:text-base mb-4 leading-normal"
+      <div
+        class="wysiwyg px-5 pt-5 lg:text-xl md:text-l sm:text-base mb-4 leading-normal"
       >
-        {{ post.post_content }}
-      </p>
+        {{ post.post_content|wpautop }}
+      </div>
 
       <a
-        class="float-right mt-4 mr-5 p-2 text-lg request-viewing-button"
+        class="float-right mb-4 mr-5 p-2 text-lg request-viewing-button"
         href="/bio"
         >Request Viewing/Info</a
       >
@@ -64,7 +64,7 @@
           <span class="float-right">{{ post.info_neighborhood }}</span>
         </li>
       </ul>
-      <div class="md:w-3/6 w-full mt-4">
+      <div class="md:w-3/6 w-full mt-2">
         <div id="map"></div>
       </div>
 
@@ -101,8 +101,8 @@
     </div>
     <h3 class="py-1 mb-4 text-3xl text-center">More Information</h3>
     <div class="flex justify-center">
-      <div class="form-container max-w-2xl ">
-        <p>
+      <div class="form-container max-w-full">
+        <p class="mb-3">
           For more information on all available listings, or future listings
           coming to the market, please inquire here:
         </p>

@@ -685,6 +685,10 @@ body {
 //   }
 // }
 
-// .wysiwyg td {
-//   padding-right: 15px;
-// }
+.wysiwyg {
+  p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
