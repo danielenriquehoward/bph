@@ -242,7 +242,12 @@ module.exports = {
     "order-3",
     "order-4",
     "order-5",
-    "max-h-52"
+    "max-h-52",
+    "wpforms-form-89",
+    "form-bio",
+    "wpforms-field-container",
+    "wpforms-submit-container",
+    "wpforms-field"
   ],
   whitelistPatterns: [
     /^qs/,
