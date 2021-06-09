@@ -240,6 +240,30 @@ iframe {
     height: 0px;
   }
 }
+#neighborhood_form {
+  @media (max-width: 768px) {
+    #wpforms-form-89 {
+      .wpforms-field-container {
+        display: flex;
+        flex-wrap: wrap;
+        .wpforms-field {
+          margin: 0px !important;
+          margin-bottom: 15px !important;
+          width: 100%;
+          &:nth-child(even) {
+            padding-left: 0px;
+          }
+          &:nth-child(odd) {
+            padding-right: 0px;
+          }
+        }
+        textarea {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
 #submit_form_valuation {
   transition: opacity 2s;
   opacity: 0;
