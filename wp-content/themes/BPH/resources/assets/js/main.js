@@ -17,7 +17,11 @@ new Vue({ el: "#app" });
 Template Components
 ========================================================================== */
 
-const app = {};
+import valuation from './valuation.js';
+
+const app = {
+  valuation
+};
 
 
 /* ==========================================================================
@@ -39,6 +43,7 @@ app.instantiate = function (elem) {
 };
 
 $(document).ready(function () {
+  console.log("yoyoyo")
   // Component functions that should only run if the component exists in the ajax container or page
   $('[data-module]').each(function () {
     // console.log( $(this) );
@@ -55,3 +60,11 @@ $(window).on('load', () => $('.pageloader').removeClass('is-active'));
 
 // Toggle mobile menu
 $('.navbar-burger').on('click', () => $('.navbar-burger, .navbar-menu').toggleClass('is-active'));
+
+
+console.log("HI")
+function checkSubmit(e) {
+   if(e && e.keyCode == 13) {
+    console.log("submit")
+   }
+}

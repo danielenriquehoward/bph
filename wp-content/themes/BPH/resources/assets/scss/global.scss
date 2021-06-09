@@ -80,6 +80,7 @@ body {
 
   .logos-container {
     border-bottom: 4px solid $primary;
+    border-top: 4px solid $primary;
   }
 
   .featured-image {
@@ -107,10 +108,16 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
+  .p-7percent {
+    padding: 0 3% 0 3%;
+  }
   .home-container {
+    .featured-image {
+      height: 200px;
+    }
     .home-page-content {
-      padding-left: 7%;
-      padding-right: 7%;
+      padding-left: 1rem;
+      padding-right: 1rem;
 
       p {
         margin: 15px 0 15px 0;
@@ -123,6 +130,10 @@ body {
       }
     }
   }
+}
+
+.valuation-container {
+  min-height: calc(100vh - 144px);
 }
 
 // .h2,

@@ -1,0 +1,49 @@
+{% extends "base.twig" %} {% block content %}
+
+
+
+<section class="flex container flex-col flex-wrap items-center valuation-container" data-module="valuation">
+  <hr class="my-3 lg:hidden">
+  <h1 class="text-4xl lg:text-5xl text-primary">Home Valuation</h1>
+  <hr class="my-3">
+  <div id="field-container">
+    <div class="wysiwyg mt-3 text-center">
+      {{ post.post_content }}
+    </div>
+    <div class="field">
+      <input class="valuation-input" onKeyPress="return checkSubmit(event)" type="text"/>
+      <div class="line"></div>
+    </div>
+  </div>
+  <div id="submit_form_valuation" class="mt-4" style="opacity:0;">
+    <div class="flex justify-center">
+      <div class="form-container text-center w-full mb-12">
+        <p class="mb-4 text-primary">
+          We are gathering more info on your home, but we're having a little trouble verifying some of the details.
+        </p>
+        <p class="mb-4 bold text-primary text-xl">
+          Have no fear, Jon is on the case!
+        </p>
+        <p class="mb-2 text-primary italic">
+          Provide us with a few details and we'll get to work on resolving your address:
+        </p>
+
+        {% filter shortcodes %} [wpforms id="89" title="false"] {% endfilter %}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<script>
+  function checkSubmit(e) {
+    console.log(e)
+     if(e && e.keyCode == 13) {
+        document.getElementById("field-container").classList.add("closed")
+        document.getElementById("submit_form_valuation").classList.add("open")
+     }
+  }
+</script>
+
+{% endblock %}
