@@ -11,11 +11,6 @@ $context['post'] = $post;
 $args = array(
     'numberposts' => -1,
     'post_type' => 'articles',
- //    'meta_query' => array(
- //     array( "key" => "brand_name", "value" => $title )
- //   ),
-    
-     
 );
 
 $all_blogs= new WP_Query($args);
@@ -32,7 +27,7 @@ foreach($all_blogs->posts as $blurb){
     $blurb_object->date_posted = date('m/d/Y', strtotime($blurb->post_date));
 
     array_push($snipped_blogs, $blurb_object);
-     
+
 }
 
 $context['all_blogs'] = $snipped_blogs;
