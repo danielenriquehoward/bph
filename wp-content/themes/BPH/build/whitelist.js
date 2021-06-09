@@ -247,7 +247,8 @@ module.exports = {
     "form-bio",
     "wpforms-field-container",
     "wpforms-submit-container",
-    "wpforms-field"
+    "wpforms-field",
+    "wpforms-error-container"
   ],
   whitelistPatterns: [
     /^qs/,
