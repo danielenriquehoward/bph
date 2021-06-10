@@ -235,7 +235,7 @@ iframe {
 #field-container {
   overflow: hidden;
   transition: height 1s;
-  height: 125px;
+  height: 300px;
   &.closed {
     height: 0px;
   }
