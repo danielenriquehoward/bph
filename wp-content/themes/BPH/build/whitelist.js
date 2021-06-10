@@ -248,7 +248,8 @@ module.exports = {
     "wpforms-field-container",
     "wpforms-submit-container",
     "wpforms-field",
-    "wpforms-error-container"
+    "wpforms-error-container",
+    "wysiwyg"
   ],
   whitelistPatterns: [
     /^qs/,
