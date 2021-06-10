@@ -3,18 +3,20 @@ const clean = require("clean-webpack-plugin");
 const tailwindcss = require("tailwindcss");
 const glob = require("glob-all");
 const purgecss = require("purgecss-webpack-plugin");
-const whitelistPath = require("./build/whitelist");
+const whitelistPath = require('./build/whitelist');
+
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 /* ==========================================================================
 Config
 ========================================================================== */
 const config = {
-  siteUrl: "bph.local",
-  proxyUrl: "http://bph.local/",
+  siteUrl: "localhost",
+  proxyUrl: "https://bbp.local/",
   port: 4444,
   openOnStart: true,
-  //   pathToLocalSSLCert: "",
-  //   pathToLocalSSLKey: "",
+  // pathToLocalSSLCert: "bbp.local.crt",
+  // pathToLocalSSLKey: "bbp.local.key",
   filesToWatch: [
     "resources/views/**/*.php",
     "resources/views/**/**/*.twig",
@@ -53,22 +55,22 @@ Laravel Mix Config
 ========================================================================== */
 mix
   // handle JS files
-  .setPublicPath("dist")
-  .js("resources/assets/js/main.js", "dist/js/scripts." + makeid(8) + ".min.js")
+  .setPublicPath("static")
+  .js("resources/assets/js/main.js", "static/js/scripts." + makeid(8) + ".min.js")
   .disableNotifications()
 
   // Sass files and Tailwind CSS Config
   .sass(
     "resources/assets/scss/main.scss",
-    "dist/css/styles." + makeid(8) + ".min.css"
+    "static/css/styles." + makeid(8) + ".min.css"
   )
   .sass(
     "resources/assets/scss/login.scss",
-    "dist/css/login." + makeid(8) + ".min.css"
+    "static/css/login." + makeid(8) + ".min.css"
   )
   .sass(
     "resources/assets/scss/admin.scss",
-    "dist/css/admin." + makeid(8) + ".min.css"
+    "static/css/admin." + makeid(8) + ".min.css"
   )
 
   .disableNotifications()
@@ -82,11 +84,11 @@ mix
     }
   })
 
-  // Move images to dist directory
-  .copyDirectory("resources/assets/images", "dist/images")
+  // Move images to static directory
+  .copyDirectory("resources/assets/images", "static/images")
 
-  // Move fonts to dist directory
-  .copyDirectory("resources/assets/fonts/*", "dist/fonts")
+  // Move fonts to static directory
+  .copyDirectory("resources/assets/fonts/*", "static/fonts")
 
   // BrowserSync
   .browserSync({
@@ -108,7 +110,9 @@ if (!mix.inProduction()) {
   mix
     .webpackConfig({
       devtool: "source-map",
-      plugins: [new clean(["dist"])]
+      plugins: [
+        new clean(["static"])
+      ]
     })
     .sourceMaps();
 }
@@ -148,7 +152,10 @@ if (mix.inProduction()) {
   // more examples can be found at https://gist.github.com/jack-pallot/217a5d172ffa43c8c85df2cb41b80bad
   mix.webpackConfig({
     plugins: [
-      new clean(["dist"], { verbose: false }),
+      
+      // new BundleAnalyzerPlugin(),
+      
+      new clean(["static"], { verbose: false }),
       new purgecss({
         paths: glob.sync([
           path.join(__dirname, "./**/*.php"),
@@ -164,7 +171,7 @@ if (mix.inProduction()) {
         ],
         whitelist: whitelistPath.whitelist,
         whitelistPatterns: whitelistPath.whitelistPatterns,
-        whitelistPatternsChildren: whitelistPath.whitelistPatternsChildren
+        whitelistPatternsChildren: whitelistPath.whitelistPatternsChildren,
       })
     ],
     module: {
