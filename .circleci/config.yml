@@ -21,7 +21,7 @@ jobs:
       #
       # - image: redis:2.8.19
 
-    working_directory: /
+    working_directory: ~/wp-content/themes/BPH
 
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
